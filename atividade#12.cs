@@ -1,7 +1,7 @@
 using System;
 class program{
     static void Main(){
-        Console.Write("Por favor, escolha qual é o produto que deseja comprar: ");
+      Console.Write("Por favor, escolha qual é o produto que deseja comprar: ");
       double Feijão = 7;
       Console.Write("Feijão R$" + Feijão + "  ");
       double Arroz = 6;
