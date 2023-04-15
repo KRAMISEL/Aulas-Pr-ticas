@@ -7,5 +7,8 @@ class program{
         Console.WriteLine("Nota 1: " + nota1);
         Console.WriteLine("Nota 2: " + nota2);
         Console.WriteLine("A média entre " + nota1 + " e " + nota2 + " é igual a " + (nota1 + nota2) / 2);
+        Console.WriteLine("Nota 1: {0}",nota1);
+        Console.WriteLine("Nota 2: {0}",nota2);
+        Console.WriteLine("A média entre {0} e {1} é igual a {2}",nota1,nota2,(nota1+nota2)/2);
     }
 }
