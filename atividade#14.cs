@@ -5,7 +5,6 @@ class program{
         double KmPecorridos = double.Parse(Console.ReadLine());
         Console.Write("Por quantos dias você alugou o carro? ");
         double DiasAlugados = double.Parse(Console.ReadLine());
-        Console.WriteLine("Pela quantidade de Km pecorridos, e pela quantidades de dias alugados, você deverá pagar R$" + KmPecorridos * 0.20 + DiasAlugados * 90 + ",00");
         Console.WriteLine("Pela quantidade de Km pecorridos, e pela quantidades de dias alugados, você deverá pagar R${0}.",KmPecorridos * 0.20 + DiasAlugados * 90);
     }
 }
