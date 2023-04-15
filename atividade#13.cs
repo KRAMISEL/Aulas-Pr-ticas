@@ -4,5 +4,6 @@ class program{
         Console.Write("Qual é o seu salário? ");
         double salário = double.Parse(Console.ReadLine());
         Console.WriteLine("O seu salário de R$" + salário + " receberá um aumento de 15% e passará a valer R$" + salário * 1.15);
+        Console.WriteLine("O seu salário de R${0} receberá um aumento de 15% e passará a valer R${1}",salário,salário * 1.15);
     }
 }
