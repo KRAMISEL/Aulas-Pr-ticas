@@ -3,12 +3,11 @@ class program{
     static void Main(){
         Console.Write("Digite o seu ano de nascimento: ");
         int anoDeNascimento = int.Parse(Console.ReadLine());
-        int ano1 = 2023;
-        if(ano1 - anoDeNascimento  < 18){
-            Console.WriteLine("Faltam " + (anoDeNascimento - ano1 + 18) + " anos para o seu alistamento.");
+        if(2023 - anoDeNascimento  < 18){
+            Console.WriteLine("Faltam {0} anos para o seu alistamento.",(anoDeNascimento - 2023 + 18));
         }
         else{
-            Console.WriteLine("Já se passaram " + (ano1 - anoDeNascimento - 18) + " anos do seu alistamento.");
+            Console.WriteLine("Já se passaram {0} anos do seu alistamento.",(2023 - anoDeNascimento - 18));
         }
     }
 }

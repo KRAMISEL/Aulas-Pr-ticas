@@ -5,6 +5,6 @@ class program{
        int cigarros = int.Parse(Console.ReadLine());
        Console.Write("E a quantos anos você fuma? ");
        int anos = int.Parse(Console.ReadLine());
-       Console.WriteLine("Você já perdeu " + (cigarros * 10) * (365 * anos) + " dias da sua vida.");
+       Console.WriteLine("Você já perdeu {0} dias da sua vida.",(cigarros * 10) * (365 * anos));
     }
 }
