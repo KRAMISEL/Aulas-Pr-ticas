@@ -61,7 +61,6 @@ class program{
         int[] quantidadeCadastro = new int[100];
 
         Console.Write("Quantos cadastros deseja fazer: ");
-        quantidadeCadastro = Console.Read();
     }
     static void Alterarcadastro(){
         Console.WriteLine("Quais cadastros deseja alterar:");
