@@ -40,25 +40,30 @@ class program{
         int quantidadeDeCadastro = int.Parse(Console.ReadLine());
         int[] A = new int[quantidadeDeCadastro];
         for(int B = 0; B < A.Length; B++){
-            Console.WriteLine("Digite o seu nome: ");
-            string[] nome = new string[quantidadeDeCadastro] = Console.ReadLine();
-            Console.WriteLine(" ");
-
+            Console.Write("Digite o seu nome: ");
+            string[] nome = new string[quantidadeDeCadastro];
+            nome[0] = Console.ReadLine();
+            Console.WriteLine();
+            
             Console.Write("Digite a sua idade: ");
-            int[] idade = new int[quantidadeDeCadastro] = int.Parse(Console.ReadLine());
-            Console.WriteLine(" ");
+            int[] idade = new int[quantidadeDeCadastro];
+            idade[0] = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             Console.Write("Digite o seu peso: ");
-            double[] peso = new double[quantidadeDeCadastro] = double.Parse(Console.ReadLine());
-            Console.WriteLine(" ");
+            double[] peso = new double[quantidadeDeCadastro];
+            peso[0] = double.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             Console.Write("Digite a sua altura: ");
-            double[] altura = new double[quantidadeDeCadastro] = double.Parse(Console.ReadLine());
-            Console.WriteLine(" ");
+            double[] altura = new double[quantidadeDeCadastro];
+            altura[0] = double.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             Console.Write("Digite o seu sexo: ");
-            char[] sexo = new char[quantidadeDeCadastro] = char.Parse(Console.ReadLine());
-            Console.WriteLine(" ");
+            char[] sexo = new char[quantidadeDeCadastro];
+            sexo[0] = char.Parse(Console.ReadLine());
+            Console.WriteLine();
         }
     }
     static void Alterarcadastro(){
