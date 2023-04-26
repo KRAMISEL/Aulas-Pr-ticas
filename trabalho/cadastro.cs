@@ -39,32 +39,53 @@ class program{
         Console.Write("Quantos cadastros deseja fazer: ");
         int quantidadeDeCadastro = int.Parse(Console.ReadLine());
         int[] A = new int[quantidadeDeCadastro];
-        int C = (-1);
-        for(int B = 0; B < A.Length; B++){
-            if(C < B){
+        string[] nome = new string[quantidadeDeCadastro];
+        int[] idade = new int[quantidadeDeCadastro];
+        double[] peso = new double[quantidadeDeCadastro];
+        double[] altura = new double[quantidadeDeCadastro];
+        char[] sexo = new char[quantidadeDeCadastro];
+        int C = 0;
+        int B = 0;
+        for(B = 0; B < A.Length; B++){
+            if(C != B){
                 C++;
             }
             Console.Write("Digite o seu nome: ");
-            string[] nome = new string[quantidadeDeCadastro];
-            nome[0] = Console.ReadLine();
+            nome[B] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
-            int[] idade = new int[quantidadeDeCadastro];
-            idade[0] = int.Parse(Console.ReadLine());
+            idade[B] = int.Parse(Console.ReadLine());
             Console.Write("Digite o seu peso: ");
-            double[] peso = new double[quantidadeDeCadastro];
-            peso[0] = double.Parse(Console.ReadLine());
+            peso[B] = double.Parse(Console.ReadLine());
             Console.Write("Digite a sua altura: ");
-            double[] altura = new double[quantidadeDeCadastro];
-            altura[0] = double.Parse(Console.ReadLine());
+            altura[B] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
-            char[] sexo = new char[quantidadeDeCadastro];
-            sexo[0] = char.Parse(Console.ReadLine());
+            sexo[B] = char.Parse(Console.ReadLine());
             Console.WriteLine("Cadastro de número ({0}) resgitrado.",C + 1);
             Console.WriteLine();
         }
+        C-=B;
+        for(B = 0; B < A.Length; B++){
+        if(C != B){
+            C++;
+        }
+        Console.WriteLine("Cadastro de número ({0}):",C+1);
+        Console.WriteLine("Nome:{0}",nome[B]);
+        Console.WriteLine("Idade:{0}",idade[B]);
+        Console.WriteLine("Peso:{0}",peso[B]);
+        Console.WriteLine("Altura:{0}",altura[B]);
+        Console.WriteLine("Sexo:{0}",sexo[B]);
+        Console.WriteLine();
+        }
+        //Alterarcadastro(ref nome,ref idade,ref peso,ref altura,ref sexo);
     }
     static void Alterarcadastro(){
         Console.WriteLine("Quais cadastros deseja alterar:");
+        //(ref string[] nomeAl,ref int[] idadeAl,ref double[] pesoAl,ref double[] alturaAl,ref char[] sexoAl)
+        /*Console.WriteLine(nomeAl[1]);
+        Console.WriteLine(idadeAl[2]);
+        Console.WriteLine(pesoAl[1]);
+        Console.WriteLine(alturaAl[2]);
+        Console.WriteLine(sexoAl[0]);*/
     }
     static void Imprimirtodososcadastros(){
     }
