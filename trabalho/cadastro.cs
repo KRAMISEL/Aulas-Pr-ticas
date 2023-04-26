@@ -39,30 +39,27 @@ class program{
         Console.Write("Quantos cadastros deseja fazer: ");
         int quantidadeDeCadastro = int.Parse(Console.ReadLine());
         int[] A = new int[quantidadeDeCadastro];
+        int C = (-1);
         for(int B = 0; B < A.Length; B++){
+            if(C < B){
+                C++;
+            }
             Console.Write("Digite o seu nome: ");
             string[] nome = new string[quantidadeDeCadastro];
             nome[0] = Console.ReadLine();
-            Console.WriteLine();
-            
             Console.Write("Digite a sua idade: ");
             int[] idade = new int[quantidadeDeCadastro];
             idade[0] = int.Parse(Console.ReadLine());
-            Console.WriteLine();
-
             Console.Write("Digite o seu peso: ");
             double[] peso = new double[quantidadeDeCadastro];
             peso[0] = double.Parse(Console.ReadLine());
-            Console.WriteLine();
-
             Console.Write("Digite a sua altura: ");
             double[] altura = new double[quantidadeDeCadastro];
             altura[0] = double.Parse(Console.ReadLine());
-            Console.WriteLine();
-
             Console.Write("Digite o seu sexo: ");
             char[] sexo = new char[quantidadeDeCadastro];
             sexo[0] = char.Parse(Console.ReadLine());
+            Console.WriteLine("Cadastro de número ({0}) resgitrado.",C + 1);
             Console.WriteLine();
         }
     }
