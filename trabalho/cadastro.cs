@@ -74,10 +74,10 @@ class program{
             Console.WriteLine();
         }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-        if(N_deCadastros[A] != A){
+        if(N_deCadastros[A] < A){
             N_deCadastros[A]++;
         }
-        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros[A] += 1);
+        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros[A] + 1);
         Console.WriteLine("Nome:{0}",nome[A]);
         Console.WriteLine("Idade:{0}",idade[A]);
         Console.WriteLine("Peso:{0}",peso[A]);
