@@ -6,7 +6,7 @@ class program{
     static double[] peso;
     static double[] altura;
     static char[] sexo;
-    static int[] N_deCadastros;
+    static int N_deCadastros;
     static int A;
     static void Main(){
         Console.WriteLine("O que deseja fazer:");
@@ -49,18 +49,19 @@ class program{
         Console.WriteLine("sim/não");
         string voltar = Console.ReadLine();
         Console.WriteLine();
+        N_deCadastros = 0;
         if(voltar == "sim"){
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros[A]);
+        if(N_deCadastros < A){
+            N_deCadastros++;
+        }
+        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros);
         Console.WriteLine("Nome:{0}",nome[A]);
         Console.WriteLine("Idade:{0}",idade[A]);
         Console.WriteLine("Peso:{0}",peso[A]);
         Console.WriteLine("Altura:{0}",altura[A]);
         Console.WriteLine("Sexo:{0}",sexo[A]);
         Console.WriteLine();
-        if(N_deCadastros[A] < A){
-            N_deCadastros[A]++;
-        }
         }
         retorno:
         Console.WriteLine("Voltar para o menu?");
@@ -93,12 +94,11 @@ class program{
         peso = new double[quantidadeDeCadastro];
         altura = new double[quantidadeDeCadastro];
         sexo = new char[quantidadeDeCadastro];
-        N_deCadastros = new int[quantidadeDeCadastro];
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-            if(N_deCadastros[A] < A){
-                N_deCadastros[A]++;
+            if(N_deCadastros < A){
+                N_deCadastros++;
             }
-            Console.WriteLine("({0})",N_deCadastros[A]);
+            Console.WriteLine("({0})",N_deCadastros);
             Console.Write("Digite o seu nome: ");
             nome[A] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
@@ -166,7 +166,7 @@ class program{
         alturaAl[C] = double.Parse(Console.ReadLine());
         Console.Write("Digite o seu sexo: ");
         sexoAl[C] = char.Parse(Console.ReadLine());
-        Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros[C]);
+        Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = C);
         Console.WriteLine();
         }
         retorno2:
