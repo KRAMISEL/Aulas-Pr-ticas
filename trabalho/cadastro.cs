@@ -51,7 +51,7 @@ class program{
         Console.WriteLine();
         if(voltar == "sim"){
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-        Console.WriteLine("Cadastro de número (0{0}):",N_deCadastros[A]);
+        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros[A]);
         Console.WriteLine("Nome:{0}",nome[A]);
         Console.WriteLine("Idade:{0}",idade[A]);
         Console.WriteLine("Peso:{0}",peso[A]);
@@ -98,7 +98,7 @@ class program{
             if(N_deCadastros[A] < A){
                 N_deCadastros[A]++;
             }
-            Console.WriteLine("(0{0})",N_deCadastros[A]);
+            Console.WriteLine("({0})",N_deCadastros[A]);
             Console.Write("Digite o seu nome: ");
             nome[A] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
@@ -153,8 +153,7 @@ class program{
             goto retorno1;
         }
         }
-        int B;
-        for(B = 0; B < alterarCadastro1.Length; B++){
+        for(int B = 0; B < alterarCadastro1.Length; B++){
         Console.Write("Qual cadastro deseja alterar: ");
         int C = int.Parse(Console.ReadLine());
         Console.Write("Digite o seu nome: ");
@@ -167,7 +166,7 @@ class program{
         alturaAl[C] = double.Parse(Console.ReadLine());
         Console.Write("Digite o seu sexo: ");
         sexoAl[C] = char.Parse(Console.ReadLine());
-        Console.WriteLine("Cadastro de número (0{0}) alterado.",N_deCadastros[C]);
+        Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros[C]);
         Console.WriteLine();
         }
         retorno2:
