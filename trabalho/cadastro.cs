@@ -10,7 +10,9 @@ class program{
     static int A;
     static void Main(){
         Console.WriteLine("O que deseja fazer:");
+        Console.WriteLine();
         Menu();
+        Console.Write(" ");
     }
     static void Menu(){
         Console.WriteLine("(1) Cadastro;\n(2) Alterar cadastro;\n(3) Imprimir todos os cadastros;\n(4) Imprimir um cadastro;\n(5) Excluir cadastro;\n(6) Limpar tela;\n(7) Sair;");
@@ -26,7 +28,7 @@ class program{
             Imprimirtodososcadastros();
             break;
             case  "4":
-            Imprimirumcadastro();
+            Imprimirumcadastro(A);
             break;
             case  "5":
             Excluircadastro();
@@ -44,44 +46,7 @@ class program{
         }
     }
     static void Cadastro(){
-        retorno1:
-        Console.WriteLine("Já possui cadastros existentes e deseja mostrar-los?");
-        Console.WriteLine("sim/não");
-        string voltar = Console.ReadLine();
-        Console.WriteLine();
         N_deCadastros = 0;
-        if(voltar == "sim"){
-        for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-        if(N_deCadastros < A){
-            N_deCadastros++;
-        }
-        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros);
-        Console.WriteLine("Nome:{0}",nome[A]);
-        Console.WriteLine("Idade:{0}",idade[A]);
-        Console.WriteLine("Peso:{0}",peso[A]);
-        Console.WriteLine("Altura:{0}",altura[A]);
-        Console.WriteLine("Sexo:{0}",sexo[A]);
-        Console.WriteLine();
-        }
-        retorno:
-        Console.WriteLine("Voltar para o menu?");
-        Console.WriteLine("[S/s]");
-        char voltar1 = char.Parse(Console.ReadLine());
-        Console.WriteLine();
-        if(voltar1 == 'S' || voltar1 == 's'){
-            Main();
-        }
-        else{
-            goto retorno;
-        }
-        }
-        else if(voltar == "não"){
-            goto ir1;
-        }
-        else{
-            goto retorno1;
-        }
-        ir1:
         Console.Write("Quantos cadastros deseja fazer: ");
         int quantidadeDeCadastro = int.Parse(Console.ReadLine());
         quantidadeDeCadastro1 = new int[quantidadeDeCadastro];
@@ -98,7 +63,7 @@ class program{
             if(N_deCadastros < A){
                 N_deCadastros++;
             }
-            Console.WriteLine("({0})",N_deCadastros);
+            Console.WriteLine("({0})",N_deCadastros + 1);
             Console.Write("Digite o seu nome: ");
             nome[A] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
@@ -115,9 +80,9 @@ class program{
         voltar:
         Console.WriteLine("Voltar para o menu?");
         Console.WriteLine("[S/s]");
-        char voltar2 = char.Parse(Console.ReadLine());
+        char voltar = char.Parse(Console.ReadLine());
         Console.WriteLine();
-        if(voltar2 == 'S' || voltar2 == 's'){
+        if(voltar == 'S' || voltar == 's'){
             Main();
         }
         else{
@@ -125,7 +90,7 @@ class program{
         }
     }
     static void Alterarcadastro(ref string[] nomeAl,ref int[] idadeAl,ref double[] pesoAl,ref double[] alturaAl,ref char[] sexoAl){
-        if(A < 1){
+        if(A == 0){
             Console.WriteLine("Você não possui cadastros para alterar.");
             Console.WriteLine();
             Main();
@@ -155,6 +120,7 @@ class program{
         }
         for(int B = 0; B < alterarCadastro1.Length; B++){
         Console.Write("Qual cadastro deseja alterar: ");
+        Console.WriteLine("(Observação.: Reduza o número do cadastro em 1.)");
         int C = int.Parse(Console.ReadLine());
         Console.Write("Digite o seu nome: ");
         nomeAl[C] = Console.ReadLine();
@@ -182,15 +148,81 @@ class program{
         }
     }
     static void Imprimirtodososcadastros(){
+        N_deCadastros = 0;
+        if(A == 0){
+        Console.WriteLine("Você não possui cadastros existentes.");
+        Console.WriteLine();
+        Main();
+        }
+        for(A = 0; A < quantidadeDeCadastro1.Length; A++){
+        if(N_deCadastros < A){
+            N_deCadastros++;
+        }
+        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
+        Console.WriteLine("Nome:{0}",nome[A]);
+        Console.WriteLine("Idade:{0}",idade[A]);
+        Console.WriteLine("Peso:{0}",peso[A]);
+        Console.WriteLine("Altura:{0}",altura[A]);
+        Console.WriteLine("Sexo:{0}",sexo[A]);
+        Console.WriteLine();
+        }
+        retorno:
+        Console.WriteLine("Voltar para o menu?");
+        Console.WriteLine("[S/s]");
+        char voltar = char.Parse(Console.ReadLine());
+        Console.WriteLine();
+        if(voltar == 'S' || voltar == 's'){
+            Main();
+        }
+        else{
+            goto retorno;
+        }
     }
-    static void Imprimirumcadastro(){
+    static void Imprimirumcadastro(int Aa){
+        N_deCadastros = 0;
+        Console.Write("Qual cadastro deseja imprimir: ");
+        Console.WriteLine("(Observação.: Reduza o número do cadastro em 1.)");
+        Aa = int.Parse(Console.ReadLine());
+        while(N_deCadastros < Aa){
+            N_deCadastros++;
+        }
+        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
+        Console.WriteLine("Nome:{0}",nome[Aa]);
+        Console.WriteLine("Idade:{0}",idade[Aa]);
+        Console.WriteLine("Peso:{0}",peso[Aa]);
+        Console.WriteLine("Altura:{0}",altura[Aa]);
+        Console.WriteLine("Sexo:{0}",sexo[Aa]);
+        Console.WriteLine();
+        retorno:
+        Console.WriteLine("Voltar para o menu?");
+        Console.WriteLine("[S/s]");
+        char voltar = char.Parse(Console.ReadLine());
+        Console.WriteLine();
+        if(voltar == 'S' || voltar == 's'){
+            Main();
+        }
+        else{
+            goto retorno;
+        }
     }
     static void Excluircadastro(){
     }
     static void Limpartela(){
+        Console.Clear();
+        retorno:
+        Console.WriteLine("Voltar para o menu?");
+        Console.WriteLine("[S/s]");
+        char voltar = char.Parse(Console.ReadLine());
+        Console.WriteLine();
+        if(voltar == 'S' || voltar == 's'){
+            Main();
+        }
+        else{
+            goto retorno;
+        }
     }
     static void Sair(){
         Console.WriteLine("Agradeçemos pela pressença, volte sempre.");
-        Console.WriteLine();
+        Console.Write(" ");
     }   
 }
