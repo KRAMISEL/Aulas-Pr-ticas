@@ -20,24 +20,31 @@ class program{
         switch(execução){
             case  "1":
             Cadastro();
+            Console.WriteLine();
             break;
             case  "2":
             Alterarcadastro(ref nome,ref idade,ref peso,ref altura,ref sexo);
+            Console.WriteLine();
             break;
             case  "3":
             Imprimirtodososcadastros();
+            Console.WriteLine();
             break;
             case  "4":
             Imprimirumcadastro(A);
+            Console.WriteLine();
             break;
             case  "5":
             Excluircadastro();
+            Console.WriteLine();
             break;
             case  "6":
             Limpartela();
+            Console.WriteLine();
             break;
             case  "7":
             Sair();
+            Console.WriteLine();
             break;
             default:
             Console.Clear();
@@ -82,7 +89,7 @@ class program{
         if(A == 0){
             Console.WriteLine("Você não possui cadastros para alterar.");
             Console.WriteLine();
-            Main();
+            goto avançar;
         }
         if(quantidadeDeCadastro1.Length == 1){
         int Aa = 0;
@@ -98,7 +105,7 @@ class program{
         sexoAl[Aa] = char.Parse(Console.ReadLine());
         Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = A);
         Console.WriteLine();
-        Main();
+        goto avançar1;
         }
         retorno:
         Console.Write("Quantos cadastros deseja alterar:");
@@ -111,12 +118,34 @@ class program{
             goto retorno;
         }
         else if(alterarCadastro == 0){
-        Main();
+        goto avançar2;
+        }
+        if(alterarCadastro == quantidadeDeCadastro1.Length){
+        for(int D = 0; D < alterarCadastro1.Length; D++){
+        Console.Write("Digite o seu nome: ");
+        nomeAl[D] = Console.ReadLine();
+        Console.Write("Digite a sua idade: ");
+        idadeAl[D] = int.Parse(Console.ReadLine());
+        Console.Write("Digite o seu peso: ");
+        pesoAl[D] = double.Parse(Console.ReadLine());
+        Console.Write("Digite a sua altura: ");
+        alturaAl[D] = double.Parse(Console.ReadLine());
+        Console.Write("Digite o seu sexo: ");
+        sexoAl[D] = char.Parse(Console.ReadLine());
+        Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = D + 1);
+        Console.WriteLine();
+        }
+        goto avançar3;
         }
         for(int B = 0; B < alterarCadastro1.Length; B++){
+        //voltar:
         Console.Write("Qual cadastro deseja alterar: ");
-        Console.WriteLine("(Observação.: Reduza o número do cadastro em 1.)");
+        Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
         int C = int.Parse(Console.ReadLine());
+        /*if(C != quantidadeDeCadastro1[A]){
+            Console.WriteLine("(Erro do programa)");
+            goto voltar;
+        }*/
         Console.Write("Digite o seu nome: ");
         nomeAl[C] = Console.ReadLine();
         Console.Write("Digite a sua idade: ");
@@ -130,6 +159,10 @@ class program{
         Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = C + 1);
         Console.WriteLine();
         }
+        avançar:
+        avançar1:
+        avançar2:
+        avançar3:
         Main();
     }
     static void Imprimirtodososcadastros(){
@@ -137,7 +170,7 @@ class program{
         if(A == 0){
         Console.WriteLine("Você não possui cadastros existentes.");
         Console.WriteLine();
-        Main();
+        goto avançar;
         }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
         if(N_deCadastros < A){
@@ -151,13 +184,14 @@ class program{
         Console.WriteLine("Sexo:{0}",sexo[A]);
         Console.WriteLine();
         }
+        avançar:
         Main();
     }
     static void Imprimirumcadastro(int Aa){
         if(A == 0){
         Console.WriteLine("Você não possui cadastros existentes.");
         Console.WriteLine();
-        Main();
+        goto avançar;
         }
         N_deCadastros = -1;
         if(quantidadeDeCadastro1.Length == 1){
@@ -169,10 +203,10 @@ class program{
         Console.WriteLine("Altura:{0}",altura[B]);
         Console.WriteLine("Sexo:{0}",sexo[B]);
         Console.WriteLine();
-        Main();
+        goto avançar1;
         }
         Console.Write("Qual cadastro deseja imprimir: ");
-        Console.WriteLine("(Observação.: Reduza o número do cadastro em 1.)");
+        Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
         Aa = int.Parse(Console.ReadLine());
         while(N_deCadastros < Aa){
             N_deCadastros++;
@@ -184,6 +218,8 @@ class program{
         Console.WriteLine("Altura:{0}",altura[Aa]);
         Console.WriteLine("Sexo:{0}",sexo[Aa]);
         Console.WriteLine();
+        avançar:
+        avançar1:
         Main();
     }
     static void Excluircadastro(){
