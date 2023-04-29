@@ -137,8 +137,8 @@ class program{
         }
         goto avançar3;
         }
-        for(int B = 0; B < alterarCadastro1.Length; B++){
         //voltar:
+        for(int B = 0; B < alterarCadastro1.Length; B++){
         Console.Write("Qual cadastro deseja alterar: ");
         Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
         int C = int.Parse(Console.ReadLine());
