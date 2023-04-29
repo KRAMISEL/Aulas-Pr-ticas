@@ -17,37 +17,30 @@ class program{
     static void Menu(){
         Console.WriteLine("(1) Cadastro;\n(2) Alterar cadastro;\n(3) Imprimir todos os cadastros;\n(4) Imprimir um cadastro;\n(5) Excluir cadastro;\n(6) Limpar tela;\n(7) Sair;");
         string execução = Console.ReadLine();
+        Console.WriteLine();
         switch(execução){
             case  "1":
             Cadastro();
-            Console.WriteLine();
             break;
             case  "2":
             Alterarcadastro(ref nome,ref idade,ref peso,ref altura,ref sexo);
-            Console.WriteLine();
             break;
             case  "3":
             Imprimirtodososcadastros();
-            Console.WriteLine();
             break;
             case  "4":
             Imprimirumcadastro(A);
-            Console.WriteLine();
             break;
             case  "5":
             Excluircadastro();
-            Console.WriteLine();
             break;
             case  "6":
             Limpartela();
-            Console.WriteLine();
             break;
             case  "7":
             Sair();
-            Console.WriteLine();
             break;
             default:
-            Console.Clear();
             Main();
             break;
         }
