@@ -137,15 +137,16 @@ class program{
         }
         goto avançar3;
         }
-        //voltar:
+        voltar:
         for(int B = 0; B < alterarCadastro1.Length; B++){
         Console.Write("Qual cadastro deseja alterar: ");
         Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
         int C = int.Parse(Console.ReadLine());
-        /*if(C != quantidadeDeCadastro1[A]){
+        if(C >= quantidadeDeCadastro1.Length){
             Console.WriteLine("(Erro do programa)");
+            Console.WriteLine();
             goto voltar;
-        }*/
+        }
         Console.Write("Digite o seu nome: ");
         nomeAl[C] = Console.ReadLine();
         Console.Write("Digite a sua idade: ");
@@ -205,9 +206,16 @@ class program{
         Console.WriteLine();
         goto avançar1;
         }
+        voltar:
         Console.Write("Qual cadastro deseja imprimir: ");
         Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
         Aa = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+        if(Aa >= quantidadeDeCadastro1.Length){
+            Console.WriteLine("(Erro do programa)");
+            Console.WriteLine();
+            goto voltar;
+        }
         while(N_deCadastros < Aa){
             N_deCadastros++;
         }
