@@ -80,7 +80,7 @@ class program{
     }
     static void Alterarcadastro(ref string[] nomeAl,ref int[] idadeAl,ref double[] pesoAl,ref double[] alturaAl,ref char[] sexoAl){
         if(A == 0){
-            Console.WriteLine("Você não possui cadastros para alterar.");
+            Console.WriteLine("Não existem cadastros a serem alterados.");
             Console.WriteLine();
             goto avançar;
         }
@@ -101,7 +101,7 @@ class program{
         goto avançar1;
         }
         retorno:
-        Console.Write("Quantos cadastros deseja alterar:");
+        Console.Write("Quantos cadastros deseja alterar: ");
         int alterarCadastro = int.Parse(Console.ReadLine());
         int[] alterarCadastro1 = new int[alterarCadastro];
         Console.WriteLine();
@@ -113,7 +113,7 @@ class program{
         else if(alterarCadastro == 0){
         goto avançar2;
         }
-        if(alterarCadastro == quantidadeDeCadastro1.Length){
+        else if(alterarCadastro == quantidadeDeCadastro1.Length){
         for(int D = 0; D < alterarCadastro1.Length; D++){
         Console.Write("Digite o seu nome: ");
         nomeAl[D] = Console.ReadLine();
@@ -162,7 +162,7 @@ class program{
     static void Imprimirtodososcadastros(){
         N_deCadastros = 0;
         if(A == 0){
-        Console.WriteLine("Você não possui cadastros existentes.");
+        Console.WriteLine("Não existem cadastros a serem imprimidos.");
         Console.WriteLine();
         goto avançar;
         }
@@ -183,7 +183,7 @@ class program{
     }
     static void Imprimirumcadastro(int Aa){
         if(A == 0){
-        Console.WriteLine("Você não possui cadastros existentes.");
+        Console.WriteLine("Não existem cadastros a serem imprimidos.");
         Console.WriteLine();
         goto avançar;
         }
@@ -224,7 +224,45 @@ class program{
         Main();
     }
     static void Excluircadastro(){
-        
+        if(A == 0){
+            Console.WriteLine("Não existem cadastros a serem excluidos.");
+            Console.WriteLine();
+            goto avançar;
+        }
+        if(quantidadeDeCadastro1.Length == 1){
+            goto avançar1;
+        }
+        retorno:
+        Console.Write("Quantos cadastros deseja excluir: ");
+        int excluirCadastro = int.Parse(Console.ReadLine());
+        int[] excluirCadastro1 = new int[excluirCadastro];
+        Console.WriteLine();
+        if(excluirCadastro > A){
+            Console.WriteLine("A quantidade de cadastros a serem excluidos não corresponde a quantidade de cadastros existentes.");
+            Console.WriteLine();
+            goto retorno;
+        }
+        else if(excluirCadastro == 0){
+        goto avançar2;
+        }
+        else if(excluirCadastro == quantidadeDeCadastro1.Length){
+            goto avançar3;
+        }
+        voltar:
+        Console.Write("Qual cadastro deseja excluir: ");
+        Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
+        int Aa = int.Parse(Console.ReadLine());
+        if(Aa >= quantidadeDeCadastro1.Length){
+            Console.WriteLine("(Erro do programa)");
+            Console.WriteLine();
+            goto voltar;
+        }
+        //
+        avançar:
+        avançar1:
+        avançar2:
+        avançar3:
+        Main();
     }
     static void Limpartela(){
         Console.Clear();
