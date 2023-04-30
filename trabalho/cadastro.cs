@@ -230,6 +230,7 @@ class program{
             goto avançar;
         }
         if(quantidadeDeCadastro1.Length == 1){
+            //
             goto avançar1;
         }
         retorno:
@@ -246,6 +247,7 @@ class program{
         goto avançar2;
         }
         else if(excluirCadastro == quantidadeDeCadastro1.Length){
+            //
             goto avançar3;
         }
         voltar:
