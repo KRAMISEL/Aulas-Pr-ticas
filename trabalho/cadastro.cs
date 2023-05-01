@@ -1,5 +1,5 @@
 using System;
-class program{
+class program{                                             //Programa finalizado em 01/05/2023.
     static int[] quantidadeDeCadastro1;
     static string[] nome;
     static int[] idade;
@@ -210,7 +210,7 @@ class program{
         Console.Write("Qual cadastro deseja imprimir: ");
         Aa = int.Parse(Console.ReadLine());
         Console.WriteLine();
-        if(Aa >= quantidadeDeCadastro1.Length){
+        if(Aa >= quantidadeDeCadastro1.Length + 1){
             Console.WriteLine("(Erro do programa)");
             Console.WriteLine();
             goto voltar;
