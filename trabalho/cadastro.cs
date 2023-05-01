@@ -9,13 +9,14 @@ class program{
     static int N_deCadastros;
     static int A;
     static void Main(){
+        Console.WriteLine("Atendimento de cadastro ao cliente.");
         Console.WriteLine("O que deseja fazer:");
         Console.WriteLine();
         Menu();
         Console.Write(" ");
     }
     static void Menu(){
-        Console.WriteLine("(1) Cadastro;\n(2) Alterar cadastro;\n(3) Imprimir todos os cadastros;\n(4) Imprimir um cadastro;\n(5) Excluir cadastro;\n(6) Limpar tela;\n(7) Sair;");
+        Console.WriteLine("(1) Cadastrar;\n(2) Alterar cadastro;\n(3) Imprimir todos os cadastros;\n(4) Imprimir um cadastro;\n(5) Excluir cadastro;\n(6) Limpar tela;\n(7) Sair;");
         string execução = Console.ReadLine();
         Console.WriteLine();
         switch(execução){
