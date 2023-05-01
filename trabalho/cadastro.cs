@@ -210,8 +210,8 @@ class program{
             goto avançar1;
         }
         voltar:
+        voltar1:
         Console.Write("Qual cadastro deseja imprimir: ");
-        Console.WriteLine("(Observação.: Insira o índice do Cadastro reduzindo o número do cadastro em 1.)");
         Aa = int.Parse(Console.ReadLine());
         Console.WriteLine();
         if(Aa >= quantidadeDeCadastro1.Length){
@@ -219,15 +219,20 @@ class program{
             Console.WriteLine();
             goto voltar;
         }
+        else if(Aa == 0){
+            Console.WriteLine("(Erro do programa)");
+            Console.WriteLine();
+            goto voltar1;
+        }
         while(N_deCadastros < Aa){
             N_deCadastros++;
         }
         Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
-        Console.WriteLine("Nome:{0}",nome[Aa]);
-        Console.WriteLine("Idade:{0}",idade[Aa]);
-        Console.WriteLine("Peso:{0}",peso[Aa]);
-        Console.WriteLine("Altura:{0}",altura[Aa]);
-        Console.WriteLine("Sexo:{0}",sexo[Aa]);
+        Console.WriteLine("Nome:{0}",nome[Aa - 1]);
+        Console.WriteLine("Idade:{0}",idade[Aa - 1]);
+        Console.WriteLine("Peso:{0}",peso[Aa - 1]);
+        Console.WriteLine("Altura:{0}",altura[Aa - 1]);
+        Console.WriteLine("Sexo:{0}",sexo[Aa - 1]);
         Console.WriteLine();
         avançar:
         avançar1:
@@ -239,13 +244,38 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        if(quantidadeDeCadastro1.Length == 1){
+        else if(quantidadeDeCadastro1.Length == 1){
             int Af = 0;
-            int Aa = int.Parse(nome[Af] = "0");
-            int Ab = idade[Af] = 0;
-            double Ac = peso[Af] = 0;
-            double Ad = altura[Af] = 0;
-            int Ae = sexo[Af] = '0';
+            int Aaa = int.Parse(nome[Af]);
+            int Aba = idade[Af];
+            double Aca = peso[Af];
+            double Ada = altura[Af];
+            int Aea = sexo[Af];
+            for(int Baa = Af - 1; Baa < nome.Length - 1; Baa++){
+                nome[Baa] = nome[Baa + 1];
+            }
+            for(int Bba = Af - 1; Bba < idade.Length - 1; Bba++){
+                idade[Bba] = idade[Bba + 1];
+            }
+            for(int Bca = Af - 1; Bca < peso.Length - 1; Bca++){
+                peso[Bca] = peso[Bca + 1];
+            }
+            for(int Bda = Af - 1; Bda < altura.Length - 1; Bda++){
+                altura[Bda] = altura[Bda + 1];
+            }
+            for(int Bea = Af - 1; Bea < sexo.Length - 1; Bea++){
+                sexo[Bea] = sexo[Bea + 1];
+            }
+            nome[nome.Length - 1] = "0";
+            idade[idade.Length - 1] = 0;
+            peso[peso.Length - 1] = 0;
+            altura[altura.Length - 1] = 0;
+            sexo[sexo.Length - 1] = '0';
+            Aaa = int.Parse(nome[Af]);
+            Aba = idade[Af];
+            Aca = peso[Af];
+            Ada = altura[Af];
+            Aea = sexo[Af];
             goto avançar1;
         }
         retorno:
@@ -263,18 +293,42 @@ class program{
         }
         else if(excluirCadastro1.Length == quantidadeDeCadastro1.Length){
             for(int C = 0; C < excluirCadastro1.Length; C++){
-            int Aa = int.Parse(nome[C] = "0");
-            int Ab = idade[C] = 0;
-            double Ac = peso[C] = 0;
-            double Ad = altura[C] = 0;
-            int Ae = sexo[C] = '0';
+            int Aab = int.Parse(nome[C]);
+            int Abb = idade[C];
+            double Acb = peso[C];
+            double Adb = altura[C];
+            int Aeb = sexo[C];
+            for(int Bab = C - 1; Bab < nome.Length - 1; Bab++){
+                nome[Bab] = nome[Bab + 1];
+            }
+            for(int Bbb = C - 1; Bbb < idade.Length - 1; Bbb++){
+                idade[Bbb] = idade[Bbb + 1];
+            }
+            for(int Bcb = C - 1; Bcb < peso.Length - 1; Bcb++){
+                peso[Bcb] = peso[Bcb + 1];
+            }
+            for(int Bdb = C - 1; Bdb < altura.Length - 1; Bdb++){
+                altura[Bdb] = altura[Bdb + 1];
+            }
+            for(int Beb = C - 1; Beb < sexo.Length - 1; Beb++){
+                sexo[Beb] = sexo[Beb + 1];
+            }
+            nome[nome.Length - 1] = "0";
+            idade[idade.Length - 1] = 0;
+            peso[peso.Length - 1] = 0;
+            altura[altura.Length - 1] = 0;
+            sexo[sexo.Length - 1] = '0';
+            Aab = int.Parse(nome[C]);
+            Abb = idade[C];
+            Acb = peso[C];
+            Adb = altura[C];
+            Aeb = sexo[C];
         }
             goto avançar3;
         }
         voltar:
         voltar1:
-        int B;
-        for(B = 0; B < excluirCadastro1.Length; B++){
+        for(int B = 0; B < excluirCadastro1.Length; B++){
             Console.Write("Qual cadastro deseja excluir: ");
             int exCadastro = int.Parse(Console.ReadLine());
             Console.WriteLine();
@@ -293,28 +347,26 @@ class program{
             double Ac = peso[exCadastro - 1];
             double Ad = altura[exCadastro - 1];
             int Ae = sexo[exCadastro - 1];
-            /*
-            for(B = exCadastro; B < nome.Length - 1; B++){
-                nome[B] = nome[B + 1];
+            for(int Ba = exCadastro - 1; Ba < nome.Length - 1; Ba++){
+                nome[Ba] = nome[Ba + 1];
             }
-            for(B = exCadastro; B < idade.Length - 1; B++){
-                idade[B] = idade[B + 1];
+            for(int Bb = exCadastro - 1; Bb < idade.Length - 1; Bb++){
+                idade[Bb] = idade[Bb + 1];
             }
-            for(B = exCadastro; B < peso.Length - 1; B++){
-                peso[B] = peso[B + 1];
+            for(int Bc = exCadastro - 1; Bc < peso.Length - 1; Bc++){
+                peso[Bc] = peso[Bc + 1];
             }
-            for(B = exCadastro; B < altura.Length - 1; B++){
-                altura[B] = altura[B + 1];
+            for(int Bd = exCadastro - 1; Bd < altura.Length - 1; Bd++){
+                altura[Bd] = altura[Bd + 1];
             }
-            for(B = exCadastro; B < sexo.Length - 1; B++){
-                sexo[B] = sexo[B + 1];
+            for(int Be = exCadastro - 1; Be < sexo.Length - 1; Be++){
+                sexo[Be] = sexo[Be + 1];
             }
-            */
-            nome[nome.Length - 1] = " ";
+            nome[nome.Length - 1] = " 0";
             idade[idade.Length - 1] = 0;
             peso[peso.Length - 1] = 0;
             altura[altura.Length - 1] = 0;
-            sexo[sexo.Length - 1] = ' ';
+            sexo[sexo.Length - 1] = '0';
             Aa = int.Parse(nome[exCadastro - 1]);
             Ab = idade[exCadastro - 1];
             Ac = peso[exCadastro - 1];
