@@ -56,14 +56,12 @@ class program{                                             //Programa finalizado
             goto avançar;
         }
         else if(A > 0){
-            nome = new string[quantidadeDeCadastro += A];
-            idade = new int[quantidadeDeCadastro += A];
-            peso = new double[quantidadeDeCadastro += A];
-            altura = new double[quantidadeDeCadastro += A];
-            sexo = new char[quantidadeDeCadastro += A];
-        for(int B = A; B < A + quantidadeDeCadastro1.Length; B++){
-            A++;
-            Console.WriteLine("({0})",N_deCadastros = A);
+            //
+        for(int B = 0; B < quantidadeDeCadastro1.Length; B++){
+        if(N_deCadastros < A){
+            N_deCadastros++;
+        }
+            Console.WriteLine("({0})",N_deCadastros = A + 1);
             Console.Write("Digite o seu nome: ");
             nome[A] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
