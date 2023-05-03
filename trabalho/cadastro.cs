@@ -75,11 +75,6 @@ class program{                                             //Programa finalizado
         }
             goto avançar1;
         }
-        /*
-        else if(nome[nome.Length > 1]){
-
-        }
-        */
         nome = new string[quantidadeDeCadastro];
         idade = new int[quantidadeDeCadastro];
         peso = new double[quantidadeDeCadastro];
