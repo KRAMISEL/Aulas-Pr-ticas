@@ -21,7 +21,7 @@ class program{                                             //Programa finalizado
         Console.WriteLine();
         switch(execução){
             case  "1":
-            Cadastro();
+            Cadastrar();
             break;
             case  "2":
             Alterarcadastro(ref nome,ref idade,ref peso,ref altura,ref sexo);
@@ -46,41 +46,41 @@ class program{                                             //Programa finalizado
             break;
         }
     }
-    static void Cadastro(){
+    static void Cadastrar()
+    {
         N_deCadastros = 0;
         Console.Write("Quantos cadastros deseja fazer: ");
         int quantidadeDeCadastro = int.Parse(Console.ReadLine());
         quantidadeDeCadastro1 = new int[quantidadeDeCadastro];
+        nome = new string[quantidadeDeCadastro];
+        idade = new int[quantidadeDeCadastro];
+        peso = new double[quantidadeDeCadastro];
+        altura = new double[quantidadeDeCadastro];
+        sexo = new char[quantidadeDeCadastro];
         Console.WriteLine();
         if(quantidadeDeCadastro == 0){
             goto avançar;
         }
         else if(A > 0){
-            //
         for(int B = 0; B < quantidadeDeCadastro1.Length; B++){
         if(N_deCadastros < A){
             N_deCadastros++;
         }
             Console.WriteLine("({0})",N_deCadastros = A + 1);
             Console.Write("Digite o seu nome: ");
-            nome[A] = Console.ReadLine();
+            nome[A] = nome[nome.Length + 1] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
-            idade[A] = int.Parse(Console.ReadLine());
+            idade[A] = idade[idade.Length + 1] = int.Parse(Console.ReadLine());
             Console.Write("Digite o seu peso: ");
-            peso[A] = double.Parse(Console.ReadLine());
+            peso[A] = peso[peso.Length + 1] = double.Parse(Console.ReadLine());
             Console.Write("Digite a sua altura: ");
-            altura[A] = double.Parse(Console.ReadLine());
+            altura[A] = altura[altura.Length + 1] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
-            sexo[A] = char.Parse(Console.ReadLine());
+            sexo[A] = sexo[sexo.Length + 1] = char.Parse(Console.ReadLine());
             Console.WriteLine();
         }
             goto avançar1;
         }
-        nome = new string[quantidadeDeCadastro];
-        idade = new int[quantidadeDeCadastro];
-        peso = new double[quantidadeDeCadastro];
-        altura = new double[quantidadeDeCadastro];
-        sexo = new char[quantidadeDeCadastro];
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
         if(N_deCadastros < A){
             N_deCadastros++;
