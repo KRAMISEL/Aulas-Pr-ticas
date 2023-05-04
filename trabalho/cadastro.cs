@@ -1,5 +1,6 @@
 using System;
-class program{                                             //Programa finalizado em 01/05/2023.
+class program{
+    static int quantidadeDeCadastro;
     static int[] quantidadeDeCadastro1;
     static string[] nome;
     static int[] idade;
@@ -49,7 +50,7 @@ class program{                                             //Programa finalizado
     static void Cadastrar(){
         N_deCadastros = 0;
         Console.Write("Quantos cadastros deseja fazer: ");
-        int quantidadeDeCadastro = int.Parse(Console.ReadLine());
+        quantidadeDeCadastro = int.Parse(Console.ReadLine());
         quantidadeDeCadastro1 = new int[quantidadeDeCadastro];
         nome = new string[quantidadeDeCadastro];
         idade = new int[quantidadeDeCadastro];
@@ -61,7 +62,7 @@ class program{                                             //Programa finalizado
             goto avançar;
         }
         else if(A > 0){
-            Novoscadastros(quantidadeDeCadastro);
+            Novoscadastros();
             goto avançar1;
         }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
@@ -85,9 +86,8 @@ class program{                                             //Programa finalizado
         avançar1:
         Main();
     }
-    static void Novoscadastros(int quantidadeDeCadastro){
-        int Aa = quantidadeDeCadastro + 1;
-        for(A = Aa; A < Aa - 1; A++){
+    static void Novoscadastros(){
+        for(A = (quantidadeDeCadastro = quantidadeDeCadastro + 1); A < quantidadeDeCadastro - 1; A++){
         if(N_deCadastros < A){
             N_deCadastros++;
         }
@@ -104,7 +104,6 @@ class program{                                             //Programa finalizado
             sexo[A] = char.Parse(Console.ReadLine());
             Console.WriteLine();
         }
-
     }
     static void Alterarcadastro(ref string[] nomeAl,ref int[] idadeAl,ref double[] pesoAl,ref double[] alturaAl,ref char[] sexoAl){
         if(A == 0){
