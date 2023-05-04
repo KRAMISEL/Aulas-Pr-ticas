@@ -68,15 +68,15 @@ class program{                                             //Programa finalizado
         }
             Console.WriteLine("({0})",N_deCadastros = A + 1);
             Console.Write("Digite o seu nome: ");
-            nome[A] = nome[nome.Length + 1] = Console.ReadLine();
+            nome[nome.Length + 1] = nome[A] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
-            idade[A] = idade[idade.Length + 1] = int.Parse(Console.ReadLine());
+            idade[idade.Length + 1] = idade[A] = int.Parse(Console.ReadLine());
             Console.Write("Digite o seu peso: ");
-            peso[A] = peso[peso.Length + 1] = double.Parse(Console.ReadLine());
+            peso[peso.Length + 1] = peso[A] = double.Parse(Console.ReadLine());
             Console.Write("Digite a sua altura: ");
-            altura[A] = altura[altura.Length + 1] = double.Parse(Console.ReadLine());
+            altura[altura.Length + 1] = altura[A] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
-            sexo[A] = sexo[sexo.Length + 1] = char.Parse(Console.ReadLine());
+            sexo[sexo.Length + 1] = sexo[A] = char.Parse(Console.ReadLine());
             Console.WriteLine();
         }
             goto avançar1;
