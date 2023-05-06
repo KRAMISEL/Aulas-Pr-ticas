@@ -48,6 +48,10 @@ class program{
         }
     }
     static void Cadastrar(){
+        if(quantidadeDeCadastro > 0){
+            Novoscadastros();
+            goto avançar1;
+        }
         N_deCadastros = 0;
         Console.Write("Quantos cadastros deseja fazer: ");
         quantidadeDeCadastro = int.Parse(Console.ReadLine());
@@ -60,10 +64,6 @@ class program{
         Console.WriteLine();
         if(quantidadeDeCadastro == 0){
             goto avançar;
-        }
-        else if(A > 0){
-            Novoscadastros();
-            goto avançar1;
         }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
         if(N_deCadastros < A){
@@ -87,11 +87,19 @@ class program{
         Main();
     }
     static void Novoscadastros(){
-        for(A = (quantidadeDeCadastro = quantidadeDeCadastro + 1); A < quantidadeDeCadastro - 1; A++){
+        Console.Write("Quantos cadastros deseja fazer: ");
+        int quantidadeDeCadastro2 = int.Parse(Console.ReadLine());
+        int Aa = quantidadeDeCadastro1.Length + quantidadeDeCadastro2;
+        for(A = Aa; A < Aa - quantidadeDeCadastro2; A++){
+            string Ab = nome[nome.Length + 1];
+            int Ac = idade[idade.Length + 1];
+            double Ad = peso[peso.Length + 1];
+            double Ae = altura[altura.Length + 1];
+            char Af = sexo[sexo.Length + 1];
         if(N_deCadastros < A){
             N_deCadastros++;
         }
-            Console.WriteLine("({0})",N_deCadastros = A + 1);
+            Console.WriteLine("({0})",N_deCadastros + 2);
             Console.Write("Digite o seu nome: ");
             nome[A] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
@@ -102,6 +110,19 @@ class program{
             altura[A] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
             sexo[A] = char.Parse(Console.ReadLine());
+            Console.WriteLine();
+        }
+        N_deCadastros -= A;
+        for(A = 0; A < Aa; A++){
+        if(N_deCadastros < A){
+            N_deCadastros++;
+        }
+            Console.WriteLine("({0})",N_deCadastros + 2);
+            Console.WriteLine("nome:{0}",nome[A]);
+            Console.WriteLine("Idade:{0}",idade[A]);
+            Console.WriteLine("Peso:{0}",peso[A]);
+            Console.WriteLine("Altura:{0}",altura[A]);
+            Console.WriteLine("Sexo:{0}",sexo[A]);
             Console.WriteLine();
         }
     }
