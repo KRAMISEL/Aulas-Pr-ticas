@@ -9,7 +9,7 @@ class program{
         Cadastrar();
     }
     static void Cadastrar(){
-        if(quantidadeDeCadastro > 1){
+        if(quantidadeDeCadastro > 0){
             Console.WriteLine("Deseja fazer novos cadastros?\n[S/N]");
             char cadastrosnovos = char.Parse(Console.ReadLine());
         if(cadastrosnovos == 'S' || cadastrosnovos == 's'){
@@ -17,7 +17,6 @@ class program{
             goto avançar;
         }
         else{
-            Console.WriteLine();
             goto avançar1;
         }
         }
@@ -40,6 +39,7 @@ class program{
         }
             Console.WriteLine("({0})",N_deCadastros + 1);
             Console.WriteLine(quantidadeDeCadastro1[A]);
+            Console.WriteLine();
         }
         avançar1:
         avançar:
@@ -48,7 +48,7 @@ class program{
     static void Novoscadastros(){
         Console.Write("Quantos cadastros deseja fazer: ");
         int quantidadeDeCadastro2 = int.Parse(Console.ReadLine());
-        quantidadeDeCadastro1 = new int[quantidadeDeCadastro + quantidadeDeCadastro2];
+        quantidadeDeCadastro1 = new int[quantidadeDeCadastro1.Length + quantidadeDeCadastro2];
         for(A = 0; A < quantidadeDeCadastro2; A++){
             N_deCadastros++;
             Console.WriteLine("({0})",N_deCadastros + 1);
@@ -63,6 +63,7 @@ class program{
         }
             Console.WriteLine("({0})",N_deCadastros + 1);
             Console.WriteLine(quantidadeDeCadastro1[A]);
+            Console.WriteLine();
         }
     }
 }

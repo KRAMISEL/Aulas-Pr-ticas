@@ -34,6 +34,7 @@ class program{
         }
             Console.WriteLine("{0}",N_deCadastros + 1);
             Console.WriteLine(quantidadeDeCadastro1[A]);
+            Console.WriteLine();
         }
     }
     static void Novoscadastros(){
@@ -49,8 +50,9 @@ class program{
         if(N_deCadastros < A){
             N_deCadastros++;
         }
-            Console.WriteLine("({0})",N_deCadastros + 2);
+            Console.WriteLine("{0}",N_deCadastros + 2);
             Console.WriteLine(quantidadeDeCadastro1[A]);
+            Console.WriteLine();
         }
     }
 }
