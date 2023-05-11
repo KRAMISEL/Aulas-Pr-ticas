@@ -2,6 +2,8 @@ using System;
 class program{
     static int quantidadeDeCadastro;
     static int[] quantidadeDeCadastro1;
+    static int excluirCadastro;
+    static int[] excluirCadastro1;
     static string[] nome;
     static int[] idade;
     static double[] peso;
@@ -225,6 +227,21 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
+        else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
+        for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro1.Length; A++){
+        if(N_deCadastros < A){
+            N_deCadastros++;
+        }
+            Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
+            Console.WriteLine("Nome:{0}",nome[A]);
+            Console.WriteLine("Idade:{0}",idade[A]);
+            Console.WriteLine("Peso:{0}",peso[A]);
+            Console.WriteLine("Altura:{0}",altura[A]);
+            Console.WriteLine("Sexo:{0}",sexo[A]);
+            Console.WriteLine();
+        }
+        goto avançar1;
+        }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
         if(N_deCadastros < A){
             N_deCadastros++;
@@ -238,6 +255,7 @@ class program{
             Console.WriteLine();
         }
         avançar:
+        avançar1:
         Console.ReadLine();
         Main();
     }
@@ -261,6 +279,7 @@ class program{
         }
         voltar:
         voltar1:
+        voltar2:
         Console.Write("Qual cadastro deseja imprimir: ");
         Aa = int.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -274,23 +293,15 @@ class program{
             Console.WriteLine();
             goto voltar1;
         }
+        else if(excluirCadastro > 0){
+        if(Aa - 1 == quantidadeDeCadastro1.Length - excluirCadastro1.Length){
+            Console.WriteLine("Esse cadastro não existe.");
+            goto voltar2;
+        }}
         while(N_deCadastros < Aa){
             N_deCadastros++;
         }
-        /*
-        if(nome[nome.Length - 1] == " " && idade[idade.Length - 1] == 0 && peso[peso.Length - 1] == 0 && altura[altura.Length - 1] == 0 && sexo[sexo.Length - 1] == ' '){
-            Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
-            Console.WriteLine("Nome:{0}",nome[Aa - 1]);
-            Console.WriteLine("Idade:{0}",idade[Aa - 1]);
-            Console.WriteLine("Peso:{0}",peso[Aa - 1]);
-            Console.WriteLine("Altura:{0}",altura[Aa - 1]);
-            Console.WriteLine("Sexo:{0}",sexo[Aa - 1]);
-            Console.WriteLine();
-            Console.WriteLine("{0}\n{1}\n{2}\n{3}\n{4}",nome[nome.Length - 1],idade[idade.Length - 1],peso[peso.Length - 1],altura[altura.Length - 1],sexo[sexo.Length - 1]);
-            Console.WriteLine();
-        }
-        */
-        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
+        Console.WriteLine("Cadastro de número ({0}):",N_deCadastros);
         Console.WriteLine("Nome:{0}",nome[Aa - 1]);
         Console.WriteLine("Idade:{0}",idade[Aa - 1]);
         Console.WriteLine("Peso:{0}",peso[Aa - 1]);
@@ -303,39 +314,42 @@ class program{
         Main();
     }
     static void Excluircadastro(){
+        int excluirCadastro2;
         if(A == 0){
             Console.WriteLine("Não existem cadastros a serem excluidos.");
             Console.ReadLine();
             Console.WriteLine();
-
             goto avançar;
         }
         else if(quantidadeDeCadastro1.Length == 1){
-            int Af = 0;
-            nome[Af] = " ";
-            idade[Af] = 0;
-            peso[Af] = 0;
-            altura[Af] = 0;
-            sexo[Af] = ' ';
+            int Ag = 0;
+            quantidadeDeCadastro1[Ag] = 0;
+            nome[Ag] = " ";
+            idade[Ag] = 0;
+            peso[Ag] = 0;
+            altura[Ag] = 0;
+            sexo[Ag] = ' ';
             Console.WriteLine("Cadastro excluido.");
             Console.WriteLine();
             goto avançar1;
         }
-        retorno:
-        Console.Write("Quantos cadastros deseja excluir: ");
-        int excluirCadastro = int.Parse(Console.ReadLine());
-        int[] excluirCadastro1 = new int[excluirCadastro];
-        Console.WriteLine();
-        if(excluirCadastro > A){
+        else if(excluirCadastro > 0){
+            retorno:
+            Console.Write("Quantos cadastros deseja excluir: ");
+            excluirCadastro2 = int.Parse(Console.ReadLine());
+            excluirCadastro1 = new int[excluirCadastro1.Length + excluirCadastro2];
+            Console.WriteLine();
+        if(excluirCadastro2 > A){
             Console.WriteLine("A quantidade de cadastros a serem excluidos não corresponde a quantidade de cadastros existentes.");
             Console.WriteLine();
             goto retorno;
         }
-        else if(excluirCadastro == 0){
+        else if(excluirCadastro2 == 0){
         goto avançar2;
         }
-        else if(excluirCadastro == quantidadeDeCadastro1.Length){
+        else if(excluirCadastro2 == quantidadeDeCadastro1.Length){
         for(int C = 0; C < excluirCadastro1.Length; C++){
+            quantidadeDeCadastro1[C] = 0;
             nome[C] = " ";
             idade[C] = 0;
             peso[C] = 0;
@@ -348,6 +362,82 @@ class program{
         }
         voltar:
         voltar1:
+        for(int B = 0; B < excluirCadastro2; B++){
+            Console.Write("Qual cadastro deseja excluir: ");
+            int exCadastro1 = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+        if(excluirCadastro2 >= quantidadeDeCadastro1.Length + 1){
+            Console.WriteLine("(Erro do programa)");
+            Console.WriteLine();
+            goto voltar;
+        }
+        else if(exCadastro1 == 0){
+            Console.WriteLine("(Erro do programa)");
+            Console.WriteLine();
+            goto voltar1;
+        }
+            int Aa = quantidadeDeCadastro1[exCadastro1 - 1];
+            string Ab = nome[exCadastro1 - 1];
+            int Ac = idade[exCadastro1 - 1];
+            double Ad = peso[exCadastro1 - 1];
+            double Ae = altura[exCadastro1 - 1];
+            char Af = sexo[exCadastro1 - 1];
+        for(int Ba = exCadastro1 - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
+            quantidadeDeCadastro1[Ba] = quantidadeDeCadastro1[Ba + 1];
+        }
+        for(int Bb = exCadastro1 - 1; Bb < nome.Length - 1; Bb++){
+            nome[Bb] = nome[Bb + 1];
+        }
+        for(int Bc = exCadastro1 - 1; Bc < idade.Length - 1; Bc++){
+            idade[Bc] = idade[Bc + 1];
+        }
+        for(int Bd = exCadastro1 - 1; Bd < peso.Length - 1; Bd++){
+            peso[Bd] = peso[Bd + 1];
+        }
+        for(int Be = exCadastro1 - 1; Be < altura.Length - 1; Be++){
+            altura[Be] = altura[Be + 1];
+        }
+        for(int Bf = exCadastro1 - 1; Bf < sexo.Length - 1; Bf++){
+            sexo[Bf] = sexo[Bf + 1];
+        }
+            quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] = 0;
+            nome[nome.Length - 1] = " ";
+            idade[idade.Length - 1] = 0;
+            peso[peso.Length - 1] = 0;
+            altura[altura.Length - 1] = 0;
+            sexo[sexo.Length - 1] = ' ';
+            Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro1);
+            Console.WriteLine();
+        }
+        goto avançar4;
+        }
+        retorno1:
+        Console.Write("Quantos cadastros deseja excluir: ");
+        excluirCadastro = int.Parse(Console.ReadLine());
+        excluirCadastro1 = new int[excluirCadastro];
+        Console.WriteLine();
+        if(excluirCadastro > A){
+            Console.WriteLine("A quantidade de cadastros a serem excluidos não corresponde a quantidade de cadastros existentes.");
+            Console.WriteLine();
+            goto retorno1;
+        }
+        else if(excluirCadastro == 0){
+        goto avançar5;
+        }
+        else if(excluirCadastro == quantidadeDeCadastro1.Length){
+        for(int C = 0; C < excluirCadastro1.Length; C++){
+            nome[C] = " ";
+            idade[C] = 0;
+            peso[C] = 0;
+            altura[C] = 0;
+            sexo[C] = ' ';
+        }
+            Console.WriteLine("Todos os cadastros foram excluidos.");
+            Console.WriteLine();
+            goto avançar6;
+        }
+        voltar2:
+        voltar3:
         for(int B = 0; B < excluirCadastro1.Length; B++){
             Console.Write("Qual cadastro deseja excluir: ");
             int exCadastro = int.Parse(Console.ReadLine());
@@ -355,18 +445,19 @@ class program{
         if(exCadastro >= quantidadeDeCadastro1.Length + 1){
             Console.WriteLine("(Erro do programa)");
             Console.WriteLine();
-            goto voltar;
+            goto voltar2;
         }
         else if(exCadastro == 0){
             Console.WriteLine("(Erro do programa)");
             Console.WriteLine();
-            goto voltar1;
+            goto voltar3;
         }
-            string Aa = nome[exCadastro - 1];
-            int Ab = idade[exCadastro - 1];
-            double Ac = peso[exCadastro - 1];
-            double Ad = altura[exCadastro - 1];
-            int Ae = sexo[exCadastro - 1];
+            int Aa = quantidadeDeCadastro1[exCadastro - 1];
+            string Ab = nome[exCadastro - 1];
+            int Ac = idade[exCadastro - 1];
+            double Ad = peso[exCadastro - 1];
+            double Ae = altura[exCadastro - 1];
+            char Af = sexo[exCadastro - 1];
         for(int Ba = exCadastro - 1; Ba < nome.Length - 1; Ba++){
             nome[Ba] = nome[Ba + 1];
         }
@@ -382,6 +473,7 @@ class program{
         for(int Be = exCadastro - 1; Be < sexo.Length - 1; Be++){
             sexo[Be] = sexo[Be + 1];
         }
+            quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] = 0;
             nome[nome.Length - 1] = " ";
             idade[idade.Length - 1] = 0;
             peso[peso.Length - 1] = 0;
@@ -394,6 +486,9 @@ class program{
         avançar1:
         avançar2:
         avançar3:
+        avançar4:
+        avançar5:
+        avançar6:
         Main();
     }
     static void Limpartela(){
