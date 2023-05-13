@@ -62,7 +62,7 @@ class program{
             N_deCadastros++;
             Console.WriteLine("({0})",N_deCadastros + 1);
             Console.Write(": ");
-            quantidadeDeCadastro1[A + quantidadeDeCadastro1.Length - 1] = int.Parse(Console.ReadLine());
+            quantidadeDeCadastro1[A + quantidadeDeCadastro1.Length - quantidadeDeCadastro2] = int.Parse(Console.ReadLine());
             Console.WriteLine();
         }
         N_deCadastros = 0;

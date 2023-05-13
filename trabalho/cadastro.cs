@@ -2,7 +2,7 @@ using System;
 class program{
     static int quantidadeDeCadastro;
     static int[] quantidadeDeCadastro1;
-    static int excluirCadastro;
+    static int excluirCadastro = 0;
     static int[] excluirCadastro1;
     static string[] nome;
     static int[] idade;
@@ -108,15 +108,15 @@ class program{
             N_deCadastros++;
             Console.WriteLine("({0})",N_deCadastros + 1);
             Console.Write("Digite o seu nome: ");
-            nome[A + nome.Length - 1] = Console.ReadLine();
+            nome[A + nome.Length - quantidadeDeCadastro2] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
-            idade[A + idade.Length - 1] = int.Parse(Console.ReadLine());
+            idade[A + idade.Length - quantidadeDeCadastro2] = int.Parse(Console.ReadLine());
             Console.Write("Digite o seu peso: ");
-            peso[A + peso.Length - 1] = double.Parse(Console.ReadLine());
+            peso[A + peso.Length - quantidadeDeCadastro2] = double.Parse(Console.ReadLine());
             Console.Write("Digite a sua altura: ");
-            altura[A + altura.Length - 1] = double.Parse(Console.ReadLine());
+            altura[A + altura.Length - quantidadeDeCadastro2] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
-            sexo[A + sexo.Length - 1] = char.Parse(Console.ReadLine());
+            sexo[A + sexo.Length - quantidadeDeCadastro2] = char.Parse(Console.ReadLine());
             Console.WriteLine();
         }
         N_deCadastros = 0;
@@ -140,14 +140,14 @@ class program{
             Console.ReadLine();
             goto avançar;
         }
-        else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
+        /*else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
         for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro1.Length + 1; A++){
             Console.WriteLine("Cadastros não existente.");
             Console.WriteLine();
             Console.ReadLine();
         }
         goto avançar1;
-        }
+        }*/
         else if(quantidadeDeCadastro1.Length == 1){
             int Aa = 0;
             Console.Write("Digite o seu nome: ");
@@ -230,7 +230,7 @@ class program{
             Console.WriteLine();
         }
         avançar:
-        avançar1:
+        //avançar1:
         avançar2:
         avançar3:
         avançar4:
@@ -243,7 +243,7 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
+        /*else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
         for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro1.Length; A++){
         if(N_deCadastros < A){
             N_deCadastros++;
@@ -257,7 +257,7 @@ class program{
             Console.WriteLine();
         }
         goto avançar1;
-        }
+        }*/
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
         if(N_deCadastros < A){
             N_deCadastros++;
@@ -271,7 +271,7 @@ class program{
             Console.WriteLine();
         }
         avançar:
-        avançar1:
+        //avançar1:
         Console.ReadLine();
         Main();
     }
@@ -338,12 +338,12 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
+        /*else if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
             Console.WriteLine("Não existem cadastros a serem excluidos.");
             Console.ReadLine();
             Console.WriteLine();
             goto avançar1;
-        }
+        }*/
         else if(quantidadeDeCadastro1.Length == 1){
             int Ag = 0;
             quantidadeDeCadastro1[Ag] = 0;
@@ -506,7 +506,7 @@ class program{
             Console.WriteLine();
         }
         avançar:
-        avançar1:
+        //avançar1:
         avançar2:
         avançar3:
         avançar4:
