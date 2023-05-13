@@ -141,7 +141,7 @@ class program{
             Console.ReadLine();
             goto avançar;
         }
-        else if(EX == 1){
+        else if(EX > 0){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem alterados.");
             Console.WriteLine();
@@ -211,7 +211,7 @@ class program{
             Console.WriteLine();
             goto voltar1;
         }
-        else if(EX == 1){
+        else if(EX > 0){
         if(C - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
             Console.WriteLine("Cadastro não existente.");
             Console.WriteLine();
@@ -244,7 +244,7 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(EX == 1){
+        else if(EX > 0){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem imprimidos.");
             Console.WriteLine();
@@ -289,7 +289,7 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(EX == 1){
+        else if(EX > 0){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem imprimidos.");
             Console.WriteLine();
@@ -323,7 +323,7 @@ class program{
             Console.WriteLine();
             goto voltar1;
         }
-        else if(EX == 1){
+        else if(EX > 0){
         if(Aa - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
             Console.WriteLine("Cadastro não existente.");
             Console.WriteLine();
@@ -353,7 +353,7 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(EX == 1){
+        else if(EX > 0){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem excluidos.");
             Console.ReadLine();
@@ -371,7 +371,7 @@ class program{
             Console.WriteLine();
             goto avançar2;
         }
-        else if(EX == 1){
+        else if(EX > 0){
             retorno:
             Console.Write("Quantos cadastros deseja excluir: ");
             excluirCadastro2 = int.Parse(Console.ReadLine());
