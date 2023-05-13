@@ -11,7 +11,7 @@ class program{
     static char[] sexo;
     static int N_deCadastros;
     static int A;
-    static int EX;
+    static int EX = 0;
     static void Main(){
         Console.WriteLine("Atendimento de cadastro ao cliente.");
         Console.WriteLine("O que deseja fazer:");
@@ -441,12 +441,12 @@ class program{
             sexo[sexo.Length - 1] = ' ';
             Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro);
             Console.WriteLine();
+            EX++;
         }
         avançar:
         avançar1:
         avançar2:
         avançar3:
-        EX = 1;
         Main();
     }
     static void Excluirnovoscadastros(){
@@ -509,12 +509,11 @@ class program{
             Console.WriteLine();
             goto voltar1;
         }
-        else if(EX > 0){
-        if(exCadastro1 - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
+        else if(exCadastro1 - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
             Console.WriteLine("Cadastro não existente.");
             Console.WriteLine();
             goto voltar2;
-        }}
+        }
             string Ab = nome[exCadastro1 - 1];
             int Ac = idade[exCadastro1 - 1];
             double Ad = peso[exCadastro1 - 1];
@@ -543,7 +542,6 @@ class program{
             peso[peso.Length - 1] = 0;
             altura[altura.Length - 1] = 0;
             sexo[sexo.Length - 1] = ' ';
-            Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro1);
             Console.WriteLine();
         }
         N_deCadastros = 0;
