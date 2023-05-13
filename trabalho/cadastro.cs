@@ -108,15 +108,15 @@ class program{
             N_deCadastros++;
             Console.WriteLine("({0})",N_deCadastros + 1);
             Console.Write("Digite o seu nome: ");
-            nome[A] = Console.ReadLine();
+            nome[A + nome.Length - 1] = Console.ReadLine();
             Console.Write("Digite a sua idade: ");
-            idade[A] = int.Parse(Console.ReadLine());
+            idade[A + idade.Length - 1] = int.Parse(Console.ReadLine());
             Console.Write("Digite o seu peso: ");
-            peso[A] = double.Parse(Console.ReadLine());
+            peso[A + peso.Length - 1] = double.Parse(Console.ReadLine());
             Console.Write("Digite a sua altura: ");
-            altura[A] = double.Parse(Console.ReadLine());
+            altura[A + altura.Length - 1] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
-            sexo[A] = char.Parse(Console.ReadLine());
+            sexo[A + sexo.Length - 1] = char.Parse(Console.ReadLine());
             Console.WriteLine();
         }
         N_deCadastros = 0;
