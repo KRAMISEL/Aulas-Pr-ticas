@@ -11,7 +11,7 @@ class program{
     static char[] sexo;
     static int N_deCadastros;
     static int A;
-    static int EX = 0;
+    static int EX;
     static void Main(){
         Console.WriteLine("Atendimento de cadastro ao cliente.");
         Console.WriteLine("O que deseja fazer:");
@@ -141,7 +141,7 @@ class program{
             Console.ReadLine();
             goto avançar;
         }
-        else if(EX > 0){
+        else if(EX == 1){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem alterados.");
             Console.WriteLine();
@@ -211,7 +211,7 @@ class program{
             Console.WriteLine();
             goto voltar1;
         }
-        else if(EX > 0){
+        else if(EX == 1){
         if(C - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
             Console.WriteLine("Cadastro não existente.");
             Console.WriteLine();
@@ -244,7 +244,7 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(EX > 0){
+        else if(EX == 1){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem imprimidos.");
             Console.WriteLine();
@@ -289,7 +289,7 @@ class program{
             Console.WriteLine();
             goto avançar;
         }
-        else if(EX > 0){
+        else if(EX == 1){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem imprimidos.");
             Console.WriteLine();
@@ -323,7 +323,7 @@ class program{
             Console.WriteLine();
             goto voltar1;
         }
-        else if(EX > 0){
+        else if(EX == 1){
         if(Aa - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
             Console.WriteLine("Cadastro não existente.");
             Console.WriteLine();
@@ -363,13 +363,13 @@ class program{
             Console.WriteLine();
             goto avançar2;
         }
-        else if(EX > 0){
+        else if(EX == 1){
         if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 0){
             Console.WriteLine("Não existem cadastros a serem excluidos.");
             Console.ReadLine();
             goto avançar1;
         }}
-        else if(EX > 0){
+        else if(EX == 1){
             Excluirnovoscadastros();
             goto avançar3;
         }
@@ -441,7 +441,7 @@ class program{
             sexo[sexo.Length - 1] = ' ';
             Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro);
             Console.WriteLine();
-            EX++;
+            EX = 1;
         }
         avançar:
         avançar1:
