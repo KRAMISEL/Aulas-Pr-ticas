@@ -439,16 +439,11 @@ class program{
             goto voltar1;
         }
         else if(EX == 1){
-        if(exCadastro - 1 >= excluirCadastro1.Length){
+        if(exCadastro - 1 > quantidadeDeCadastro1.Length - excluirCadastro1.Length){
             Console.WriteLine("(Erro do programa)");
             Console.ReadLine();
             goto voltar2;
         }}
-            string Aa = nome[exCadastro - 1];
-            int Ab = idade[exCadastro - 1];
-            double Ac = peso[exCadastro - 1];
-            double Ad = altura[exCadastro - 1];
-            char Ae = sexo[exCadastro - 1];
         for(int Ba = exCadastro - 1; Ba < nome.Length - 1; Ba++){
             nome[Ba] = nome[Ba + 1];
         }
