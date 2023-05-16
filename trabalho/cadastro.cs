@@ -439,7 +439,7 @@ class program{
             goto voltar1;
         }
         else if(EX == 1){
-        if(exCadastro - 1 > quantidadeDeCadastro1.Length - excluirCadastro1.Length){
+        if(exCadastro - 1 > quantidadeDeCadastro1.Length + 1 - excluirCadastro1.Length){
             Console.WriteLine("(Erro do programa)");
             Console.ReadLine();
             goto voltar2;
