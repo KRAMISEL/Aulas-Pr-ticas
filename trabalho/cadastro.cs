@@ -213,9 +213,9 @@ class program{
             }
             else if(EX == 1){
                 if(C - 1 >= quantidadeDeCadastro1.Length - excluirCadastro1.Length){
-                Console.WriteLine("Cadastro não existente.");
-                Console.WriteLine();
-                goto voltar2;
+                    Console.WriteLine("Cadastro não existente.");
+                    Console.WriteLine();
+                    goto voltar2;
                 }
             }
             Console.Write("Digite o seu nome: ");
@@ -470,8 +470,8 @@ class program{
             }
             nome[nome.Length - 1] = " ";
             idade[idade.Length - 1] = 0;
-            peso[peso.Length - 1] = 0;
-            altura[altura.Length - 1] = 0;
+            peso[peso.Length - 1] = 0.0;
+            altura[altura.Length - 1] = 0.0;
             sexo[sexo.Length - 1] = ' ';
             Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro);
             Console.WriteLine();
