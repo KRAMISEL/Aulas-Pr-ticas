@@ -55,9 +55,16 @@ class program{
         Main();
     }
     static void Novoscadastros(){
+        int[] armazenamentoDeCadastros = new int[quantidadeDeCadastro1.Length];
+        for(A = 0; A < quantidadeDeCadastro1.Length; A++){
+            armazenamentoDeCadastros[A] = quantidadeDeCadastro1[A];
+        }
         Console.Write("Quantos cadastros deseja fazer: ");
         int quantidadeDeCadastro2 = int.Parse(Console.ReadLine());
         quantidadeDeCadastro1 = new int[quantidadeDeCadastro1.Length + quantidadeDeCadastro2];
+        for(A = 0; A < quantidadeDeCadastro1.Length - quantidadeDeCadastro2; A++){
+            quantidadeDeCadastro1[A] = armazenamentoDeCadastros[A];
+        }
         for(A = 0; A < quantidadeDeCadastro2; A++){
             N_deCadastros++;
             Console.WriteLine("({0})",N_deCadastros + 1);
