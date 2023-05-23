@@ -56,15 +56,7 @@ class program{
     }
     static void Cadastrar(){
         if(quantidadeDeCadastro > 0){
-            Console.WriteLine("Deseja fazer novos cadastros?\n[S/N]");
-            char cadastrosnovos = char.Parse(Console.ReadLine());
-            if(cadastrosnovos == 'S' || cadastrosnovos == 's'){
-                Novoscadastros();
-                goto avançar;
-            }
-            else{
-                goto avançar1;
-            }
+            Novoscadastros();
         }
         N_deCadastros = 0;
         Console.Write("Quantos cadastros deseja fazer: ");
@@ -77,7 +69,7 @@ class program{
         sexo = new char[quantidadeDeCadastro];
         Console.WriteLine();
         if(quantidadeDeCadastro == 0){
-            goto avançar2;
+            goto avançar;
         }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
             if(N_deCadastros < A){
@@ -97,8 +89,6 @@ class program{
             Console.WriteLine();
         }
         avançar:
-        avançar1:
-        avançar2:
         Main();
     }
     static void Novoscadastros(){
