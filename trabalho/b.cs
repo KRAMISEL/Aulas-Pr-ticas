@@ -123,17 +123,24 @@ class program{
         Console.Write("Quantos cadastros deseja excluir: ");
         excluirCadastro = int.Parse(Console.ReadLine());
         excluirCadastro1 = new int[excluirCadastro];
+        int[] exCadastro = new int[excluirCadastro];
         Console.WriteLine();
-        for(int B = 0; B < excluirCadastro1.Length; B++){
-            Console.Write("Qual cadastro deseja excluir: ");
-            int exCadastro = int.Parse(Console.ReadLine());
+        for(A = 0; A < excluirCadastro; A++){
+            Console.Write("Quais cadastros deseja excluir: ");
+            exCadastro[A] = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            int Aa = quantidadeDeCadastro1[exCadastro - 1];
-        for(int Ba = exCadastro - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
+        }
+        Console.WriteLine("==================1");
+        for(A = 0; A < excluirCadastro1.Length; A++){
+            Console.WriteLine("===============2");
+        for(int Ba = exCadastro[A] - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
+            Console.WriteLine("==================3");
             quantidadeDeCadastro1[Ba] = quantidadeDeCadastro1[Ba + 1];
+            Console.WriteLine("==================4");
         }
             quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] = 0;
-            Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro);
+            Console.WriteLine("==================5");
+            Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro[A]);
             Console.WriteLine();
         }
         if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
