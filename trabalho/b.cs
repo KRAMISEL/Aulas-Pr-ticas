@@ -74,9 +74,9 @@ class program{
         }
         N_deCadastros = 0;
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-        if(N_deCadastros < A){
-            N_deCadastros++;
-        }
+            if(N_deCadastros < A){
+                N_deCadastros++;
+            }
             Console.WriteLine("({0})",N_deCadastros + 1);
             Console.WriteLine(quantidadeDeCadastro1[A]);
             Console.WriteLine();
@@ -95,30 +95,30 @@ class program{
             excluirCadastro2 = int.Parse(Console.ReadLine());
             excluirCadastro1 = new int[excluirCadastro1.Length + excluirCadastro2];
             Console.WriteLine();
-        for(int B = 0; B < excluirCadastro2; B++){
-            Console.Write("Qual cadastro deseja excluir: ");
-            int exCadastro1 = int.Parse(Console.ReadLine());
-            Console.WriteLine();
-            int Ab = quantidadeDeCadastro1[exCadastro1 - 1];
-        for(int Ba = exCadastro1 - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
-            quantidadeDeCadastro1[Ba] = quantidadeDeCadastro1[Ba + 1];
-        }
-            quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] = 0;
-            Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro1);
-            Console.WriteLine();
-        }
-        if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
-        N_deCadastros = 0;
-        for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro1.Length; A++){
-        if(N_deCadastros < A){
-            N_deCadastros++;
-        }
-            Console.Write("Cadastro de número ({0}):",N_deCadastros + 1);
-            Console.WriteLine("{0}",quantidadeDeCadastro1[A]);
-            Console.WriteLine();
-        }
-            goto avançar1;
-        }
+            for(int B = 0; B < excluirCadastro2; B++){
+                Console.Write("Qual cadastro deseja excluir: ");
+                int exCadastro1 = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+                int Ab = quantidadeDeCadastro1[exCadastro1 - 1];
+                    for(int Ba = exCadastro1 - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
+                        quantidadeDeCadastro1[Ba] = quantidadeDeCadastro1[Ba + 1];
+                    }
+                quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] = 0;
+                Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro1);
+                Console.WriteLine();
+            }
+            if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
+                N_deCadastros = 0;
+                for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro1.Length; A++){
+                    if(N_deCadastros < A){
+                        N_deCadastros++;
+                    }
+                    Console.Write("Cadastro de número ({0}):",N_deCadastros + 1);
+                    Console.WriteLine("{0}",quantidadeDeCadastro1[A]);
+                    Console.WriteLine();
+                }
+                goto avançar1;
+            }
         }
         Console.Write("Quantos cadastros deseja excluir: ");
         excluirCadastro = int.Parse(Console.ReadLine());
@@ -130,30 +130,30 @@ class program{
             exCadastro[A] = int.Parse(Console.ReadLine());
         }
         for(A = 0; A < excluirCadastro; A++){
-        for(int Ba = exCadastro[A] - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
-            quantidadeDeCadastro1[Ba] = quantidadeDeCadastro1[Ba + 1];
-        }
+            for(int Ba = exCadastro[A] - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
+                quantidadeDeCadastro1[Ba] = quantidadeDeCadastro1[Ba + 1];
+            }
             quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] = 0;
             Console.WriteLine("Cadastro de número ({0}) excluido.",N_deCadastros = exCadastro[A]);
             Console.WriteLine();
         }
         if(quantidadeDeCadastro1[quantidadeDeCadastro1.Length - 1] == 0){
-        N_deCadastros = 0;
-        for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro; A++){
-        if(N_deCadastros < A){
-            N_deCadastros++;
-        }
-            Console.Write("Cadastro de número ({0}):",N_deCadastros + 1);
-            Console.WriteLine("{0}",quantidadeDeCadastro1[A]);
-            Console.WriteLine();
-        }
+            N_deCadastros = 0;
+            for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro; A++){
+                if(N_deCadastros < A){
+                    N_deCadastros++;
+                }
+                Console.Write("Cadastro de número ({0}):",N_deCadastros + 1);
+                Console.WriteLine("{0}",quantidadeDeCadastro1[A]);
+                Console.WriteLine();
+            }
             goto avançar2;
         }
         N_deCadastros = 0;
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-        if(N_deCadastros < A){
-            N_deCadastros++;
-        }
+            if(N_deCadastros < A){
+                N_deCadastros++;
+            }
             Console.WriteLine("Cadastro de número ({0}):",N_deCadastros + 1);
             Console.WriteLine(":{0}",quantidadeDeCadastro1[A]);
             Console.WriteLine();
