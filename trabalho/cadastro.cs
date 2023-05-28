@@ -474,10 +474,10 @@ class program{
         voltar:
         voltar1:
         voltar2:
-        Console.WriteLine("Quais cadastros deseja excluir:");
+        Console.WriteLine("\nQuais cadastros deseja excluir:");
         for(A = 0; A < excluirCadastro; A++){
             exCadastro[A] = int.Parse(Console.ReadLine());
-            Console.WriteLine("++++++++++++++++++++++++++++++++");
+            Console.WriteLine("===============================");
             if(exCadastro[A] >= quantidadeDeCadastro1.Length + 1){
                 Console.WriteLine("\n(Erro do programa)");
                 goto voltar;
@@ -491,6 +491,7 @@ class program{
                 goto voltar2;
             }
         }
+        Array.Sort(exCadastro);
         Array.Reverse(exCadastro);
         for(A = 0; A < excluirCadastro; A++){
             for(int Ba = exCadastro[A] - 1; Ba < nome.Length - 1; Ba++){
@@ -514,7 +515,7 @@ class program{
             altura[altura.Length - 1] = 0.0;
             sexo[sexo.Length - 1] = ' ';
         }
-        Array.Reverse(exCadastro);
+        Array.Sort(exCadastro);
         for(A = 0; A < excluirCadastro; A++){
             Console.WriteLine("\nCadastro de número ({0}) excluido.",N_deCadastros = exCadastro[A]);
             Console.WriteLine();
