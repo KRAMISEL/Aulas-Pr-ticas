@@ -178,7 +178,7 @@ class program{
             Console.Write("Digite o seu sexo: ");
             sexoAl[Aa] = char.Parse(Console.ReadLine());
             Console.WriteLine("Cadastro alterado.");
-            Console.WriteLine();
+            Console.WriteLine("==================");
             goto avançar2;
         }
         else if(quantidadeDeCadastro1.Length - excluirCadastro1.Length == 1){
@@ -194,7 +194,7 @@ class program{
             Console.Write("Digite o seu sexo: ");
             sexoAl[Ab] = char.Parse(Console.ReadLine());
             Console.WriteLine("Cadastro alterado.");
-            Console.WriteLine();
+            Console.WriteLine("==================");
             goto avançar3;
         }
         retorno:
@@ -226,8 +226,8 @@ class program{
                 alturaAl[D] = double.Parse(Console.ReadLine());
                 Console.Write("Digite o seu sexo: ");
                 sexoAl[D] = char.Parse(Console.ReadLine());
-                Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = D + 1);
-                Console.WriteLine();
+                Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = D);
+                Console.WriteLine("==================================");
             }
         goto avançar5;
         }
@@ -243,8 +243,8 @@ class program{
                 alturaAl[D] = double.Parse(Console.ReadLine());
                 Console.Write("Digite o seu sexo: ");
                 sexoAl[D] = char.Parse(Console.ReadLine());
-                Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = D + 1);
-                Console.WriteLine();
+                Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = D);
+                Console.WriteLine("\n==================================");
             }
         goto avançar6;
         }
@@ -279,8 +279,8 @@ class program{
             alturaAl[C - 1] = double.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
             sexoAl[C - 1] = char.Parse(Console.ReadLine());
-            Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = C + 1);
-            Console.WriteLine();
+            Console.WriteLine("Cadastro de número ({0}) alterado.",N_deCadastros = C);
+            Console.WriteLine("==================================");
         }
         avançar:
         avançar1:
@@ -312,7 +312,7 @@ class program{
             Console.WriteLine("Peso:{0}",peso[A]);
             Console.WriteLine("Altura:{0}",altura[A]);
             Console.WriteLine("Sexo:{0}",sexo[A]);
-            Console.WriteLine();
+            Console.WriteLine("=========================");
             }
         goto avançar1;
         }
@@ -326,7 +326,7 @@ class program{
             Console.WriteLine("Peso:{0}",peso[A]);
             Console.WriteLine("Altura:{0}",altura[A]);
             Console.WriteLine("Sexo:{0}",sexo[A]);
-            Console.WriteLine();
+            Console.WriteLine("=========================");
         }
         avançar:
         avançar1:
