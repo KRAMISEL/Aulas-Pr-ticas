@@ -129,6 +129,7 @@ class program{
         for(A = 0; A < excluirCadastro; A++){
             exCadastro[A] = int.Parse(Console.ReadLine());
         }
+        Array.Sort(exCadastro);
         Array.Reverse(exCadastro);
         for(A = 0; A < excluirCadastro; A++){
             for(int Ba = exCadastro[A] - 1; Ba < quantidadeDeCadastro1.Length - 1; Ba++){
