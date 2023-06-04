@@ -3,7 +3,7 @@ class program{
     static int quantidadeDeCadastro;
     static int[] quantidadeDeCadastro1 = new int[0];
     static int excluirCadastro;
-    static int[] excluirCadastro1 = new int[0];
+    static int[] excluirCadastro1;
     static string[] nome;
     static int[] idade;
     static double[] peso;
