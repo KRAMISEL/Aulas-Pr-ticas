@@ -98,7 +98,7 @@ class program{
                 altura[A + altura.Length - quantidadeDeCadastro2] = double.Parse(Console.ReadLine());
                 Console.Write(" Digite o seu sexo: ");
                 sexo[A + sexo.Length - quantidadeDeCadastro2] = char.Parse(Console.ReadLine());
-                Console.WriteLine(" ==================================");
+                Console.WriteLine(" ==================================>");
                 N_deCadastros++;
             }
             goto avançar1;
@@ -128,7 +128,7 @@ class program{
             altura[A] = double.Parse(Console.ReadLine());
             Console.Write(" Digite o seu sexo: ");
             sexo[A] = char.Parse(Console.ReadLine());
-            Console.WriteLine(" ==================================");
+            Console.WriteLine(" ==================================>");
             N_deCadastros++;
         }
         avançar:
@@ -157,7 +157,7 @@ class program{
             Console.Write(" Digite o seu sexo: ");
             sexoAl[A] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro alterado.");
-            Console.WriteLine(" ===================");
+            Console.WriteLine(" ====================>");
             goto avançar1;
         }
         retorno:
@@ -187,7 +187,7 @@ class program{
                 Console.Write(" Digite o seu sexo: ");
                 sexoAl[A] = char.Parse(Console.ReadLine());
                 Console.WriteLine(" Cadastro de número <( {0} )> alterado.",N_deCadastros = A);
-                Console.WriteLine(" ===================================");
+                Console.WriteLine(" ========================================>");
             }
         goto avançar3;
         }
@@ -220,7 +220,7 @@ class program{
             Console.Write(" Digite o seu sexo: ");
             sexoAl[altCadastro[A] - 1] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro de número <( {0} )> alterado.",N_deCadastros = altCadastro[A]);
-            Console.WriteLine(" =====================================");
+            Console.WriteLine(" ========================================>");
         }
         avançar:
         avançar1:
@@ -244,7 +244,7 @@ class program{
             Console.WriteLine(" Peso:{0}",peso[A]);
             Console.WriteLine(" Altura:{0}",altura[A]);
             Console.WriteLine(" Sexo:{0}",sexo[A]);
-            Console.WriteLine(" ============================");
+            Console.WriteLine(" ===============================>");
             Console.WriteLine();
             goto avançar1;
         }
@@ -271,7 +271,7 @@ class program{
                 Console.WriteLine(" Peso:{0}",peso[A]);
                 Console.WriteLine(" Altura:{0}",altura[A]);
                 Console.WriteLine(" Sexo:{0}",sexo[A]);
-                Console.WriteLine(" ============================");
+                Console.WriteLine(" ===============================>");
             }
             goto avançar3;
         }
@@ -299,7 +299,7 @@ class program{
             Console.WriteLine(" Peso:{0}",peso[impCadastro[A] - 1]);
             Console.WriteLine(" Altura:{0}",altura[impCadastro[A] - 1]);
             Console.WriteLine(" Sexo:{0}",sexo[impCadastro[A] - 1]);
-            Console.WriteLine(" ============================");
+            Console.WriteLine(" ===============================>");
             Console.WriteLine();
         }
         avançar:
@@ -374,7 +374,6 @@ class program{
         Console.WriteLine(" Quais cadastros deseja excluir:");
         for(A = 0; A < excluirCadastro; A++){
             excCadastro[A] = int.Parse(Console.ReadLine());
-            Console.WriteLine(" ================================");
             if(excCadastro[A] - 1 >= quantidadeDeCadastro1.Length){
                 Console.WriteLine("\n (Erro do programa)");
                 goto voltar;
@@ -384,6 +383,7 @@ class program{
                 goto voltar1;
             }
         }
+        Console.WriteLine();
         Array.Sort(excCadastro);
         Array.Reverse(excCadastro);
         for(A = 0; A < excluirCadastro; A++){
