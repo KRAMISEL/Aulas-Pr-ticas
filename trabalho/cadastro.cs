@@ -113,7 +113,7 @@ class program{
             goto avançar2;
         }
         for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-            Console.WriteLine(" Cadastro de número <( {0} )>",N_deCadastros + 1);
+            Console.WriteLine("\n Cadastro de número <( {0} )>",N_deCadastros + 1);
             Console.Write(" Digite o seu nome: ");
             nome[A] = Console.ReadLine();
             Console.Write(" Digite a sua idade: ");
@@ -189,7 +189,7 @@ class program{
         }
         voltar:
         voltar1:
-        Console.WriteLine(" Quais cadastros deseja alterar: ");
+        Console.WriteLine("\n Quais cadastros deseja alterar: ");
         for(A = 0; A < alterarCadastro1.Length; A++){
             altCadastro[A] = int.Parse(Console.ReadLine());
             Console.WriteLine();
@@ -273,7 +273,7 @@ class program{
         }
         voltar:
         voltar1:
-        Console.WriteLine(" Quais cadastros deseja imprimir: ");
+        Console.WriteLine("\n Quais cadastros deseja imprimir: ");
         for(A = 0; A < imprimirCadastro; A++){
         impCadastro[A] = int.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -336,7 +336,7 @@ class program{
         Console.WriteLine(" Quantidade de cadastros <( {0} )>",quantidadeDeCadastro1.Length);
         Console.Write("\n Quantos cadastros deseja excluir: ");
         excluirCadastro = int.Parse(Console.ReadLine());
-        excluirCadastro1 = new int[excluirCadastro1.Length + excluirCadastro];
+        excluirCadastro1 = new int[excluirCadastro];
         int[] excCadastro = new int[excluirCadastro];
         if(excluirCadastro > quantidadeDeCadastro1.Length){
             Console.WriteLine("\n A quantidade de cadastros a serem excluidos não corresponde a quantidade de cadastros existentes.");
@@ -367,7 +367,7 @@ class program{
         }
         voltar:
         voltar1:
-        Console.WriteLine(" Quais cadastros deseja excluir:");
+        Console.WriteLine("\n Quais cadastros deseja excluir:");
         for(A = 0; A < excluirCadastro; A++){
             excCadastro[A] = int.Parse(Console.ReadLine());
             if(excCadastro[A] - 1 >= quantidadeDeCadastro1.Length){
@@ -396,26 +396,22 @@ class program{
         double[] armazenamentoDePesos = new double[peso.Length - excluirCadastro];
         double[] armazenamentoDeAlturas = new double[altura.Length - excluirCadastro];
         char[] armazenamentoDeSexos = new char[sexo.Length - excluirCadastro];
-        for(A = 0; A < quantidadeDeCadastro1.Length - excluirCadastro; A++){
-            armazenamentoDeNomes[A] = nome[A];
-            armazenamentoDeIdades[A] = idade[A];
-            armazenamentoDePesos[A] = peso[A];
-            armazenamentoDeAlturas[A] = altura[A];
-            armazenamentoDeSexos[A] = sexo[A];
-        }
+        Array.Copy(nome,armazenamentoDeNomes,nome.Length - excluirCadastro);
+        Array.Copy(idade,armazenamentoDeIdades,idade.Length - excluirCadastro);
+        Array.Copy(peso,armazenamentoDePesos,peso.Length - excluirCadastro);
+        Array.Copy(altura,armazenamentoDeAlturas,altura.Length - excluirCadastro);
+        Array.Copy(sexo,armazenamentoDeSexos,sexo.Length - excluirCadastro);
         quantidadeDeCadastro1 = new int[quantidadeDeCadastro1.Length - excluirCadastro];
         nome = new string[nome.Length - excluirCadastro];
         idade = new int[idade.Length - excluirCadastro];
         peso = new double[peso.Length - excluirCadastro];
         altura = new double[altura.Length - excluirCadastro];
         sexo = new char[sexo.Length - excluirCadastro];
-        for(A = 0; A < quantidadeDeCadastro1.Length; A++){
-            nome[A] = armazenamentoDeNomes[A];
-            idade[A] = armazenamentoDeIdades[A];
-            peso[A] = armazenamentoDePesos[A];
-            altura[A] = armazenamentoDeAlturas[A];
-            sexo[A] = armazenamentoDeSexos[A];
-        }
+        Array.Copy(armazenamentoDeNomes,nome,nome.Length);
+        Array.Copy(armazenamentoDeIdades,idade,idade.Length);
+        Array.Copy(armazenamentoDePesos,peso,peso.Length);
+        Array.Copy(armazenamentoDeAlturas,altura,altura.Length);
+        Array.Copy(armazenamentoDeSexos,sexo,sexo.Length);
         Array.Sort(excCadastro);
         for(A = 0; A < excluirCadastro; A++){
             Console.WriteLine("\n Cadastro de número <( {0} )> excluido.",N_deCadastros = excCadastro[A]);
