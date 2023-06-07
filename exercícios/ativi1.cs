@@ -13,7 +13,7 @@ class programa{
                 númerosPares[númerosParesContagem] = todosOsNúmeros[A];
                 númerosParesContagem++;
             }
-            else if(todosOsNúmeros[A] % 1 == 0 || todosOsNúmeros[A] % 3 == 0 || todosOsNúmeros[A] % 5 == 0 || todosOsNúmeros[A] % 7 == 0 || todosOsNúmeros[A] % 11 == 0 || todosOsNúmeros[A] % 13 == 0){
+            else{
                 númerosÌmpares[númerosÌmparesContagem] = todosOsNúmeros[A];
                 númerosÌmparesContagem++;
             }
