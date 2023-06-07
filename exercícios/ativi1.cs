@@ -20,12 +20,10 @@ class programa{
         }
         Console.WriteLine("\n Números Pares:");
         for(int A = 0; A < númerosParesContagem; A++){
-            if(númerosPares[A] == 0){}
             Console.WriteLine("\n{0}",númerosPares[A] + "\n===============");
         }
         Console.WriteLine("\n Números Ìmpares:");
         for(int A = 0; A < númerosÌmparesContagem; A++){
-            if(númerosÌmpares[A] == 0){}
             Console.WriteLine("\n{0}",númerosÌmpares[A] + "\n===============");
         }
     }
