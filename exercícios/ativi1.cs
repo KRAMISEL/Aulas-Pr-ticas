@@ -20,11 +20,13 @@ class programa{
         }
         Console.WriteLine("\n Números Pares:");
         for(int A = 0; A < númerosParesContagem; A++){
-            Console.WriteLine("\n{0}",númerosPares[A] + "\n===============");
+            Console.WriteLine("\n{0}",númerosPares[A]);
         }
+        Console.WriteLine("\n=================");
         Console.WriteLine("\n Números Ìmpares:");
         for(int A = 0; A < númerosÌmparesContagem; A++){
-            Console.WriteLine("\n{0}",númerosÌmpares[A] + "\n===============");
+            Console.WriteLine("\n{0}",númerosÌmpares[A]);
         }
+        Console.WriteLine("\n=================");
     }
 }
