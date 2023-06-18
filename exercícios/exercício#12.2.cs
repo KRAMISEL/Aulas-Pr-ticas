@@ -11,17 +11,19 @@ class program{
     double Cuzcuz = 8;
     Console.WriteLine("Cuzcuz por R${0}",Cuzcuz);
     string Produto = Console.ReadLine();
-    if(Produto == "Feijão"){
+    switch(Produto){
+      case"Feijão":
       Console.WriteLine("Este produto tem 5% de desconto e ficará custando R${0}",Feijão * 0.95);
-    }
-    else if(Produto == "Arroz"){
+      break;
+      case"Arroz":
       Console.WriteLine("Este produto tem 10% de desconto e ficará custando R${0}",Arroz * 0.9);
-    }
-    else if(Produto == "Carne"){
+      break;
+      case"Carne":
       Console.WriteLine("Este produto tem 5% de desconto e ficará custando R${0}",Carne * 0.95);
-    }
-    else if(Produto == "Cuzcuz"){
+      break;
+      case"Cuzcuz":
       Console.WriteLine("Este produto por enquanto não possui desconto e ficará custando R${0}",Cuzcuz);
+      break;
     }
   }
 }
