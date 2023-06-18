@@ -9,12 +9,9 @@ public class Mostarclasses{
         Classes MC = new Classes();
         Classes VP = new Classes();
         Classes MÉ = new Classes();
-        Console.WriteLine(MC.modificadorDeClasse);
-        Console.WriteLine();
-        Console.WriteLine(VP.variáveisEPropriedades);
-        Console.WriteLine();
-        Console.WriteLine(MÉ.métodos);
-        Console.WriteLine();
+        Console.WriteLine(MC.modificadorDeClasse + "\n");
+        Console.WriteLine(VP.variáveisEPropriedades + "\n");
+        Console.WriteLine(MÉ.métodos + "\n");
         /*
         Modificador da Classe: Define a visibilidade da classe.
             public: Pública, sem restrição de visualização.
