@@ -31,7 +31,7 @@ class program{
             Cadastrar();
             break;
             case"2":
-            Alteraçãodecadastro(ref nome,ref idade,ref peso,ref altura,ref sexo);
+            Alteraçãodecadastro();
             break;
             case"3":
             Impreçãodecadastro();
@@ -101,7 +101,7 @@ class program{
         avançar:
         Main();
     }
-    static void Alteraçãodecadastro(ref string[] nomeAl,ref int[] idadeAl,ref float[] pesoAl,ref float[] alturaAl,ref char[] sexoAl){
+    static void Alteraçãodecadastro(){
         Console.WriteLine("<===========================>\n<=| Alteração de cadastro |=>\n<===========================>\n");
         if(quantidadeDeCadastro1.Length == 0){
             Console.WriteLine(" Não existem cadastros a serem alterados.");
@@ -111,15 +111,15 @@ class program{
         else if(quantidadeDeCadastro1.Length == 1){
             int A = 0;
             Console.Write(" Digite o seu nome: ");
-            nomeAl[A] = Console.ReadLine();
+            nome[A] = Console.ReadLine();
             Console.Write(" Digite a sua idade: ");
-            idadeAl[A] = int.Parse(Console.ReadLine());
+            idade[A] = int.Parse(Console.ReadLine());
             Console.Write(" Digite o seu peso: ");
-            pesoAl[A] = float.Parse(Console.ReadLine());
+            peso[A] = float.Parse(Console.ReadLine());
             Console.Write(" Digite a sua altura: ");
-            alturaAl[A] = float.Parse(Console.ReadLine());
+            altura[A] = float.Parse(Console.ReadLine());
             Console.Write(" Digite o seu sexo: ");
-            sexoAl[A] = char.Parse(Console.ReadLine());
+            sexo[A] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro alterado.");
             Console.WriteLine(" ====================>");
             goto avançar1;
@@ -140,15 +140,15 @@ class program{
         else if(alterarCadastro1.Length == quantidadeDeCadastro1.Length){
             for(int A = 0; A < alterarCadastro1.Length; A++){
                 Console.Write(" Digite o seu nome: ");
-                nomeAl[A] = Console.ReadLine();
+                nome[A] = Console.ReadLine();
                 Console.Write(" Digite a sua idade: ");
-                idadeAl[A] = int.Parse(Console.ReadLine());
+                idade[A] = int.Parse(Console.ReadLine());
                 Console.Write(" Digite o seu peso: ");
-                pesoAl[A] = float.Parse(Console.ReadLine());
+                peso[A] = float.Parse(Console.ReadLine());
                 Console.Write(" Digite a sua altura: ");
-                alturaAl[A] = float.Parse(Console.ReadLine());
+                altura[A] = float.Parse(Console.ReadLine());
                 Console.Write(" Digite o seu sexo: ");
-                sexoAl[A] = char.Parse(Console.ReadLine());
+                sexo[A] = char.Parse(Console.ReadLine());
                 Console.WriteLine(" Cadastro de número <( {0} )> alterado.",N_deCadastros = A);
                 Console.WriteLine(" ========================================>");
             }
@@ -172,15 +172,15 @@ class program{
         }
         for(int A = 0; A < alterarCadastro; A++){
             Console.Write("\n Digite o seu nome: ");
-            nomeAl[altCadastro[A] - 1] = Console.ReadLine();
+            nome[altCadastro[A] - 1] = Console.ReadLine();
             Console.Write(" Digite a sua idade: ");
-            idadeAl[altCadastro[A] - 1] = int.Parse(Console.ReadLine());
+            idade[altCadastro[A] - 1] = int.Parse(Console.ReadLine());
             Console.Write(" Digite o seu peso: ");
-            pesoAl[altCadastro[A] - 1] = float.Parse(Console.ReadLine());
+            peso[altCadastro[A] - 1] = float.Parse(Console.ReadLine());
             Console.Write(" Digite a sua altura: ");
-            alturaAl[altCadastro[A] - 1] = float.Parse(Console.ReadLine());
+            altura[altCadastro[A] - 1] = float.Parse(Console.ReadLine());
             Console.Write(" Digite o seu sexo: ");
-            sexoAl[altCadastro[A] - 1] = char.Parse(Console.ReadLine());
+            sexo[altCadastro[A] - 1] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro de número <( {0} )> alterado.",N_deCadastros = altCadastro[A]);
             Console.WriteLine(" ========================================>");
         }
