@@ -9,11 +9,12 @@ class Programa{
                 números[A,B] = int.Parse(Console.ReadLine());
             }
         }
-        Console.WriteLine("====================>");
+        Console.WriteLine("====================>\nNúmeros digitados:");
         for(int A = 0; A < a; A++){
             for(int B = 0; B < a; B++){
-                Console.WriteLine(números[A,B]);
+                Console.Write(" {0} ",números[A,B]);
             }
+            Console.WriteLine();
         }
         Console.WriteLine("====================>");
     }

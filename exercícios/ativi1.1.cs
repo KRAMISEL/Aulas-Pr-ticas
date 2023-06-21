@@ -7,7 +7,7 @@ class programa{
         int númerosParesContagem = 0;
         int númerosÌmparesContagem = 0;
         Console.WriteLine("Por favor, digite 20 números inteiros.");
-        for(int A = 0; A < 20; A++){
+        for(int A = 0; A < todosOsNúmeros.Length; A++){
             todosOsNúmeros[A] = int.Parse(Console.ReadLine());
             if(todosOsNúmeros[A] % 2 == 0){
                 númerosPares[númerosParesContagem] = todosOsNúmeros[A];
@@ -20,13 +20,13 @@ class programa{
         }
         Console.WriteLine("\n Números Pares:");
         for(int A = 0; A < númerosParesContagem; A++){
-            Console.WriteLine("\n{0}",númerosPares[A]);
+            Console.WriteLine("{0}",númerosPares[A]);
         }
-        Console.WriteLine("\n=================");
+        Console.WriteLine("=================");
         Console.WriteLine("\n Números Ìmpares:");
         for(int A = 0; A < númerosÌmparesContagem; A++){
-            Console.WriteLine("\n{0}",númerosÌmpares[A]);
+            Console.WriteLine("{0}",númerosÌmpares[A]);
         }
-        Console.WriteLine("\n=================");
+        Console.WriteLine("=================");
     }
 }

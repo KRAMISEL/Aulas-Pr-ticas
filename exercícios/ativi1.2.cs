@@ -17,16 +17,16 @@ class programa{
         Console.WriteLine("\n Números Pares:");
         for(int A = 0; A < númerosPares.Length; A++){
             if(númerosPares[A] != 0){
-                Console.WriteLine("\n{0}",númerosPares[A]);
+                Console.WriteLine("{0}",númerosPares[A]);
             }
         }
-        Console.WriteLine("\n=================");
+        Console.WriteLine("=================");
         Console.WriteLine("\n Números Ìmpares:");
         for(int A = 0; A < númerosÌmpares.Length; A++){
             if(númerosÌmpares[A] != 0){
-                Console.WriteLine("\n{0}",númerosÌmpares[A]);
+                Console.WriteLine("{0}",númerosÌmpares[A]);
             }
         }
-        Console.WriteLine("\n=================");
+        Console.WriteLine("=================");
     }
 }
