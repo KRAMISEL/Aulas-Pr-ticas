@@ -4,44 +4,43 @@ class exemplo{
         voltar:
         Console.Write("Digite um número de 1 a 12:");
         int número = Convert.ToInt32(Console.ReadLine());
-        switch(número){
-            case 1:
+        if(número == 1){
             Console.WriteLine("\nEsse número corresponde ao mês de Janeiro.");
-            break;
-            case 2:
+        }
+        else if(número == 2){
             Console.WriteLine("\nEsse número corresponde ao mês de Fevereiro.");
-            break;
-            case 3:
+        }
+        else if(número == 3){
             Console.WriteLine("\nEsse número corresponde ao mês de março.");
-            break;
-            case 4:
+        }
+        else if(número == 4){
             Console.WriteLine("\nEsse número corresponde ao mês de Abril.");
-            break;
-            case 5:
+        }
+        else if(número == 5){
             Console.WriteLine("\nEsse número corresponde ao mês de maio.");
-            break;
-            case 6:
+        }
+        else if(número == 6){
             Console.WriteLine("\nEsse número corresponde ao mês de Junho.");
-            break;
-            case 7:
+        }
+        else if(número == 7){
             Console.WriteLine("\nEsse número corresponde ao mês de Julho.");
-            break;
-            case 8:
+        }
+        else if(número == 8){
             Console.WriteLine("\nEsse número corresponde ao mês de Agosto.");
-            break;
-            case 9:
+        }
+        else if(número == 9){
             Console.WriteLine("\nEsse número corresponde ao mês de Setembro.");
-            break;
-            case 10:
+        }
+        else if(número == 10){
             Console.WriteLine("\nEsse número corresponde ao mês de Outubro.");
-            break;
-            case 11:
+        }
+        else if(número == 11){
             Console.WriteLine("\nEsse número corresponde ao mês de Novembro.");
-            break;
-            case 12:
+        }
+        else if(número == 12){
             Console.WriteLine("\nEsse número corresponde ao mês de Dezembro.");
-            break;
-            default:
+        }
+        else{
             Console.WriteLine("\nNúmero errado.");
             Console.ReadLine();
             goto voltar;
