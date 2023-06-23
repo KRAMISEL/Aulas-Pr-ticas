@@ -3,10 +3,10 @@ class Números{
     static void Main(){
         int[] números = new int[1];
         float[] coleção;
-        int A = 0,B = 0,C = 0;
+        int A = 0,B = 0;
         Random random = new Random();
         foreach(int i in números){
-        números[i] = random.Next(22);
+        números[i] = random.Next(12);
         }
         if(números[0] < 3){
             números[0] = 3;
@@ -16,33 +16,64 @@ class Números{
         for(int i = 0; i < coleção.Length; i++){
             coleção[i] = float.Parse(Console.ReadLine());
         }
+        Console.Clear();
+        Console.WriteLine("A coleção possui ao todo {0} números.",coleção.Length);
+        Console.Write("\n>>");
+        Console.ReadLine();
         Console.WriteLine("\nO primeiro número da coleção é {0}.\nO ultimo número da coleção é {1}.",coleção[0],coleção[0 + coleção.Length - 1]);
-        for(int i = 0; i < coleção.Length - 1; i++){
-            A = i;
+        Console.Write("\n>>");
+        Console.ReadLine();
+        if(coleção.Length - 2 == 1){
+            Console.WriteLine("\nEntre os números {0} e {1}, existe {2} número, Que é:\n[|",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
         }
-        Console.WriteLine("\nEntre esses dois números existem {0} números.\nQue são:",A);
+        else{
+            Console.WriteLine("\nEntre os números {0} e {1}, existem {2} números, Que são:\n[|",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
+        }
         for(int i = 0; i < coleção.Length - 2; i++){
             Console.WriteLine("{0}",coleção[i + 1]);
         }
+        Console.Write("|]\n\n>>");
+        Console.ReadLine();
         for(int i = 0; i < coleção.Length; i++){
             if(coleção[i] % 2 == 0){
-                B++;
+                A++;
             }
             else{
-                C++;
+                B++;
             }
         }
-        Console.WriteLine("\nA coleção possui {0} números pares e {1} números ímpares.",B,C);
+        if(A == 1){
+            Console.WriteLine("\nA coleção possui {0} número par e {1} números ímpares.",A,B);
+        }
+        else if(B == 1){
+            Console.WriteLine("\nA coleção possui {0} números pares e {1} número ímpar.",A,B);
+        }
+        else if(A == 0){
+            Console.WriteLine("\nA coleção possui nenhum número par e {0} números ímpares.",B);
+        }
+        else if(B == 0){
+            Console.WriteLine("\nA coleção possui {0} números pares e nenhum número ímpar.",A);
+        }
+        else{
+            Console.WriteLine("\nA coleção possui {0} números pares e {1} números ímpares.",A,B);
+        }
+        Console.Write("\n>>");
+        Console.ReadLine();
         Array.Sort(coleção);
-        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.\n",coleção[0],coleção[0 + coleção.Length - 1]);
-        Console.WriteLine("A coleção ordenada crescentemente:");
+        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.",coleção[0],coleção[0 + coleção.Length - 1]);
+        Console.Write("\n>>");
+        Console.ReadLine();
+        Console.WriteLine("\nA coleção ordenada crescentemente:\n[|");
         foreach(int i in coleção){
             Console.WriteLine(i);
         }
-        Console.WriteLine("\nA coleção ordenada decrescentemente:");
+        Console.Write("|]\n\n>>");
+        Console.ReadLine();
         Array.Reverse(coleção);
+        Console.WriteLine("\nA coleção ordenada decrescentemente:\n[|");
         foreach(int i in coleção){
             Console.WriteLine(i);
         }
+        Console.Write("|]\n\nObrigado.");
     }
 }
