@@ -32,14 +32,14 @@ class Números{
                 C++;
             }
         }
-        Console.WriteLine("\nSendo que a coleção possui {0} números pares e {1} números ímpares.",B,C);
+        Console.WriteLine("\nA coleção possui {0} números pares e {1} números ímpares.",B,C);
         Array.Sort(coleção);
-        Console.WriteLine("\nO menor número sendo {0}.\nO maior número sendo {1}.\n",coleção[0],coleção[0 + coleção.Length - 1]);
-        Console.WriteLine("A coleção ordenada do menor para o maior:");
+        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.\n",coleção[0],coleção[0 + coleção.Length - 1]);
+        Console.WriteLine("A coleção ordenada crescentemente:");
         foreach(int i in coleção){
             Console.WriteLine(i);
         }
-        Console.WriteLine("\nA coleção ordenada do maior para o menor:");
+        Console.WriteLine("\nA coleção ordenada decrescentemente:");
         Array.Reverse(coleção);
         foreach(int i in coleção){
             Console.WriteLine(i);
