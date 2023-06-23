@@ -1,46 +1,47 @@
 using System;
 class Números{
     static void Main(){
-        int A,B = 0,C = 0,D = 0;
-        voltar:
-        Console.WriteLine("Digite o tamanho da coleção de números que deseja digitar:");
-        A = int.Parse(Console.ReadLine());
-        if(A < 3){
-            Console.WriteLine("A quantidade de números não pode ser inferior a três.");
-            Console.ReadLine();
-            goto voltar;
+        int[] números = new int[1];
+        float[] coleção;
+        int A = 0,B = 0,C = 0;
+        Random random = new Random();
+        foreach(int i in números){
+        números[i] = random.Next(22);
         }
-        float[] númaleatório = new float[A];
-        Console.WriteLine("Agora digite quais os números que deseja mostrar:");
-        for(int i = 0; i < númaleatório.Length; i++){
-            númaleatório[i] = float.Parse(Console.ReadLine());
+        if(números[0] < 3){
+            números[0] = 3;
         }
-        Console.WriteLine("\nO primeiro número da coleção é {0}.\nO ultimo número da coleção é {1}.",númaleatório[0],númaleatório[0 + númaleatório.Length - 1]);
-        for(int i = 0; i < númaleatório.Length - 1; i++){
-            B = i;
+        coleção = new float[números[0]];
+        Console.WriteLine("Digite números aleatórios para completar a coleção:");
+        for(int i = 0; i < coleção.Length; i++){
+            coleção[i] = float.Parse(Console.ReadLine());
         }
-        Console.WriteLine("\nEntre esses dois números existem {0} números.\nQue são:",B);
-        for(int i = 0; i < númaleatório.Length - 2; i++){
-            Console.WriteLine("{0}",númaleatório[i + 1]);
+        Console.WriteLine("\nO primeiro número da coleção é {0}.\nO ultimo número da coleção é {1}.",coleção[0],coleção[0 + coleção.Length - 1]);
+        for(int i = 0; i < coleção.Length - 1; i++){
+            A = i;
         }
-        for(int i = 0; i < númaleatório.Length; i++){
-            if(númaleatório[i] % 2 == 0){
-                C++;
+        Console.WriteLine("\nEntre esses dois números existem {0} números.\nQue são:",A);
+        for(int i = 0; i < coleção.Length - 2; i++){
+            Console.WriteLine("{0}",coleção[i + 1]);
+        }
+        for(int i = 0; i < coleção.Length; i++){
+            if(coleção[i] % 2 == 0){
+                B++;
             }
             else{
-                D++;
+                C++;
             }
         }
-        Console.WriteLine("\nSendo que a coleção possui {0} números pares e {1} números ímpares.",C,D);
-        Array.Sort(númaleatório);
-        Console.WriteLine("\nO menor número sendo {0}.\nO maior número sendo {1}.\n",númaleatório[0],númaleatório[0 + númaleatório.Length - 1]);
+        Console.WriteLine("\nSendo que a coleção possui {0} números pares e {1} números ímpares.",B,C);
+        Array.Sort(coleção);
+        Console.WriteLine("\nO menor número sendo {0}.\nO maior número sendo {1}.\n",coleção[0],coleção[0 + coleção.Length - 1]);
         Console.WriteLine("A coleção ordenada do menor para o maior:");
-        foreach(int i in númaleatório){
+        foreach(int i in coleção){
             Console.WriteLine(i);
         }
         Console.WriteLine("\nA coleção ordenada do maior para o menor:");
-        Array.Reverse(númaleatório);
-        foreach(int i in númaleatório){
+        Array.Reverse(coleção);
+        foreach(int i in coleção){
             Console.WriteLine(i);
         }
     }
