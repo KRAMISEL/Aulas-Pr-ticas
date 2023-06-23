@@ -4,8 +4,6 @@ class program{
         Console.WriteLine("Digite as duas notas do aluno:");
         double nota1 = double.Parse(Console.ReadLine());
         double nota2 = double.Parse(Console.ReadLine());
-        Console.WriteLine("Nota 1: {0}",nota1);
-        Console.WriteLine("Nota 2: {0}",nota2);
-        Console.WriteLine("A média entre {0} e {1} é igual a {2}",nota1,nota2,(nota1 + nota2) / 2);
+        Console.WriteLine("Nota 1: {0}.\nNota 2: {1}.\nA média de {2} e {3} é igual a {4}.",nota1,nota2,nota1,nota2,(nota1 + nota2) / 2);
     }
 }

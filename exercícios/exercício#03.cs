@@ -5,6 +5,6 @@ class program{
         string nome = Console.ReadLine();
         Console.Write("Qual é o seu salário? ");
         double salário = double.Parse(Console.ReadLine());
-        Console.WriteLine("O fucionário {0} tem um salário de R${1} em março.",nome,salário);
+        Console.WriteLine("O fucionário {0} tem um salário de {1:c} em março.",nome,salário);
     }
 }
