@@ -1,17 +1,14 @@
 using System;
 class Números{
     static void Main(){
-        int[] números = new int[1];
-        float[] coleção;
-        int A = 0,B = 0;
         Random random = new Random();
-        foreach(int i in números){
-        números[i] = random.Next(12);
+        int númbase = random.Next(12);
+        int A = 0,B = 0;
+        float[] coleção;
+        if(númbase < 3){
+            númbase = 3;
         }
-        if(números[0] < 3){
-            números[0] = 3;
-        }
-        coleção = new float[números[0]];
+        coleção = new float[númbase];
         Console.WriteLine("Digite números aleatórios para completar a coleção:");
         for(int i = 0; i < coleção.Length; i++){
             coleção[i] = float.Parse(Console.ReadLine());
