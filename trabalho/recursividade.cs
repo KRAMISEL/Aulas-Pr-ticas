@@ -1,23 +1,23 @@
 using System;
 class recursividade{
-    public int retorno1(int A){
-        int B;
-        if(A <= 1){
-            B = 1;
+    public int retorno1(int i){
+        int A;
+        if(i <= 1){
+            A = 1;
         }
         else{
-            B = A * retorno1(A - 1);
+            A = i * retorno1(i - 1);
         }
-        return B;
+        return A;
     }
 }
 class for_recursividade{
     static void Main(){
-        int B = 6;
-        for(int A = B; A > 1; A--){
-            B *= A - 1;
+        int A = 6;
+        for(int i = A; i > 1; i--){
+            A *= i - 1;
         }
-        Console.WriteLine(B);
+        Console.WriteLine(A);
         Console.WriteLine("<=============>");
         int res;
         recursividade ret = new recursividade();

@@ -1,55 +1,50 @@
 using System;
 class Programa{
     static void Main(){
-        int a = 4;
+        int A = 4;
+        int B = 0;
         int C = 0;
-        int D = 0;
-        int[,] números = new int[a,a];
+        int[,] números = new int[A,A];
         Console.WriteLine("Digite números:");
-        for(int A = 0; A < a; A++){
-            for(int B = 0; B < a; B++){
-                números[A,B] = int.Parse(Console.ReadLine());
+        for(int i = 0; i < A; i++){
+            for(int ia = 0; ia < A; ia++){
+                números[i,ia] = int.Parse(Console.ReadLine());
             }
         }
         Console.WriteLine("====================>\nNúmeros digitados:");
-        for(int A = 0; A < a; A++){
-            for(int B = 0; B < a; B++){
-                Console.Write(" {0} ",números[A,B]);
+        for(int i = 0; i < A; i++){
+            for(int ia = 0; ia < A; ia++){
+                Console.Write(" {0} ",números[i,ia]);
             }
             Console.WriteLine();
         }
-        Console.WriteLine("====================>");
-        Console.WriteLine("====================>\n");
-        Console.WriteLine("Números pares:");
-        for(int A = 0; A < a; A++){
-            for(int B = 0; B < a; B++){
-                if(números[A,B] % 2 == 0){
-                    Console.Write(" {0} ",números[A,B]);
+        Console.WriteLine("====================>\n\nNúmeros pares:");
+        for(int i = 0; i < A; i++){
+            for(int ia = 0; ia < A; ia++){
+                if(números[i,ia] % 2 == 0){
+                    Console.Write(" {0} ",números[i,ia]);
                 }
             }
             Console.WriteLine();
         }
-        Console.WriteLine("====================>\n");
-        Console.WriteLine("Números ímpares:");
-        for(int A = 0; A < a; A++){
-            for(int B = 0; B < a; B++){
-                if(números[A,B] % 2 != 0){
-                    Console.Write(" {0} ",números[A,B]);
+        Console.WriteLine("====================>\n\nNúmeros ímpares:");
+        for(int i = 0; i < A; i++){
+            for(int ia = 0; ia < A; ia++){
+                if(números[i,ia] % 2 != 0){
+                    Console.Write(" {0} ",números[i,ia]);
                 }
             }
             Console.WriteLine();
         }
-        Console.WriteLine("====================>\n");
-        Console.WriteLine("Média dos números ímpares:");
-        for(int A = 0; A < a; A++){
-            for(int B = 0; B < a; B++){
-                if(números[A,B] % 2 != 0){
-                    C += números[A,B];
-                    D++;
+        Console.Write("====================>\n\nMédia dos números ímpares:");
+        for(int i = 0; i < A; i++){
+            for(int ia = 0; ia < A; ia++){
+                if(números[i,ia] % 2 != 0){
+                    B += números[i,ia];
+                    C++;
                 }
             }
         }
-        Console.WriteLine(C / D);
-        Console.WriteLine("====================>");
+        Console.WriteLine(B / C);
     }
 }
