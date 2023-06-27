@@ -15,15 +15,15 @@ class programa{
             }
         }
         Console.WriteLine("\n Números Pares:");
-        for(int i = 0; i < númPares.Length; i++){
-            if(númPares[i] != 0){
-                Console.WriteLine("{0}",númPares[i]);
+        foreach(int i in númPares){
+            if(i != 0){
+                Console.WriteLine("{0}",i);
             }
         }
         Console.WriteLine("=================\n\n Números Ìmpares:");
-        for(int i = 0; i < númÌmpares.Length; i++){
-            if(númÌmpares[i] != 0){
-                Console.WriteLine("{0}",númÌmpares[i]);
+        foreach(int i in númÌmpares){
+            if(i != 0){
+                Console.WriteLine("{0}",i);
             }
         }
         Console.WriteLine("=================");
