@@ -31,8 +31,8 @@ class Números{
         }
         Console.Write("|]\n\n>>");
         Console.ReadLine();
-        for(int i = 0; i < coleção.Length; i++){
-            if(coleção[i] % 2 == 0){
+        foreach(int i in coleção){
+            if(i % 2 == 0){
                 A++;
             }
             else{
