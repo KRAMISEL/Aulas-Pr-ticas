@@ -10,11 +10,11 @@ class programa{
         }
         Array.Copy(núm,núm1,núm.Length);
         for(int i = 0; i < núm.Length; i++){
-            núm[i] = núm1[0 + (A -= 1)];
+            núm[i] = núm1[A -= 1];
         }
         Console.WriteLine("\n=========");
         foreach(int i in núm){
-            Console.WriteLine("{0}",i);
+            Console.WriteLine("\n{0}",i);
         }
         Console.WriteLine("=========");
     }
