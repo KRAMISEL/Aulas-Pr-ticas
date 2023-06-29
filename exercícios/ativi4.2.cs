@@ -6,8 +6,6 @@ class programa{
         Console.WriteLine("Preencha o vetor com números.");
         for(int i = 0; i < núm.Length / 2; i++){
             núm[i] = int.Parse(Console.ReadLine());
-        }
-        for(int i = 0; i < núm.Length / 2; i++){
             núm[i + núm.Length / 2] = núm[i];
         }
         for(int i = 0; i < núm.Length / 2; i++){
