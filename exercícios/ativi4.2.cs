@@ -1,5 +1,5 @@
 using System;
-class programa{
+class vetor{
     static void Main(){
         int A = 5;
         float[] núm = new float[A * 2];
@@ -9,7 +9,7 @@ class programa{
             núm[i + núm.Length / 2] = núm[i];
         }
         for(int i = 0; i < núm.Length / 2; i++){
-            núm[A -= 1] = núm[i + núm.Length / 2];
+            núm[(A - 1) - i] = núm[i + núm.Length / 2];
         }
         Console.Write("\n=========");
         for(int i = 0; i < núm.Length / 2; i++){
