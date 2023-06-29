@@ -2,8 +2,7 @@ using System;
 class Números{
     static void Main(){
         Random random = new Random();
-        int númbase = random.Next(12);
-        int A = 0,B = 0;
+        int númbase = random.Next(12),A = 0,B = 0;
         float[] coleção;
         if(númbase < 3){
             númbase = 3;
@@ -21,15 +20,15 @@ class Números{
         Console.Write("\n>>");
         Console.ReadLine();
         if(coleção.Length - 2 == 1){
-            Console.WriteLine("\nEntre os números {0} e {1}, existe {2} número, Que é:\n[|",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
+            Console.Write("\nEntre os números {0} e {1}, existe {2} número, que é:",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
         }
         else{
-            Console.WriteLine("\nEntre os números {0} e {1}, existem {2} números, Que são:\n[|",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
+            Console.Write("\nEntre os números {0} e {1}, existem {2} números, que são:",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
         }
         for(int i = 0; i < coleção.Length - 2; i++){
-            Console.WriteLine("{0}",coleção[i + 1]);
+            Console.Write(" {0}",coleção[i + 1]);
         }
-        Console.Write("|]\n\n>>");
+        Console.Write(".\n\n>>");
         Console.ReadLine();
         foreach(int i in coleção){
             if(i % 2 == 0){
@@ -60,17 +59,17 @@ class Números{
         Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.",coleção[0],coleção[0 + coleção.Length - 1]);
         Console.Write("\n>>");
         Console.ReadLine();
-        Console.WriteLine("\nA coleção ordenada crescentemente:\n[|");
+        Console.Write("\nA coleção ordenada crescentemente:");
         foreach(int i in coleção){
-            Console.WriteLine(i);
+            Console.Write(" {0}",i);
         }
-        Console.Write("|]\n\n>>");
+        Console.Write(".\n\n>>");
         Console.ReadLine();
         Array.Reverse(coleção);
-        Console.WriteLine("\nA coleção ordenada decrescentemente:\n[|");
+        Console.Write("\nA coleção ordenada decrescentemente:");
         foreach(int i in coleção){
-            Console.WriteLine(i);
+            Console.Write(" {0}",i);
         }
-        Console.Write("|]\n\nObrigado.");
+        Console.Write(".\n\nObrigado.\n");
     }
 }
