@@ -6,8 +6,8 @@ class vetor{
         Console.WriteLine("Preencha o vetor com números.");
         for(int i = 0; i < núm.Length; i++){
             núm[i] = float.Parse(Console.ReadLine());
+            núm1[i] = núm[i];
         }
-        Array.Copy(núm,núm1,núm.Length);
         for(int i = 0; i < núm.Length; i++){
             núm[i] = núm1[(A - 1) - i];
         }
