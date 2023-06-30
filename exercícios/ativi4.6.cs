@@ -1,19 +1,25 @@
 using System;
 class vetor{
     static void Main(){
-        int A = 2;
-        float[,] núm = new float[A * 2,A * 2];
-        Console.WriteLine("Preencha a matriz com números.");
+        int A = 3,B;
+        int[,] núm = new int[A,A];
+        Console.WriteLine("Preencha o vetor com números.");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < A; ia++){
-                núm[i,ia] = float.Parse(Console.ReadLine());
-                núm[i + 2,ia + 2] = núm[i,ia];
+                núm[i,ia] = int.Parse(Console.ReadLine());
             }
         }
-        for(int i = 0; i < A; i++){
+        for(int i = 0; i < 2; i++){
             for(int ia = 0; ia < A; ia++){
-                núm[(A - 1) - i,(A - 1) - ia] = núm[i + 2,ia + 2];
+                B = núm[i,ia];
+                núm[i,ia] = núm[(A - 1) - i,(A - 1) - ia];
+                núm[(A - 1) - i,(A - 1) - ia] = B;
             }
+        }
+        if(A % 2 != 0){
+            B = núm[1,0];
+            núm[1,0] = núm[1,2];
+            núm[1,2] = B;
         }
         Console.Write("\n=========\n");
         for(int i = 0; i < A; i++){

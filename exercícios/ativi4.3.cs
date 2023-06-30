@@ -1,25 +1,20 @@
 using System;
 class vetor{
     static void Main(){
-        int A = 2;
-        float[,] núm = new float[A,A],núm1 = new float[A,A];
+        int A = 5,B;
+        int[] núm = new int[A];
         Console.WriteLine("Preencha o vetor com números.");
-        for(int i = 0; i < A; i++){
-            for(int ia = 0; ia < A; ia++){
-                núm[i,ia] = float.Parse(Console.ReadLine());
-                núm1[i,ia] = núm[i,ia];
-            }
+        for(int i = 0; i < núm.Length; i++){
+            núm[i] = int.Parse(Console.ReadLine());
         }
-        for(int i = 0; i < A; i++){
-            for(int ia = 0; ia < A; ia++){
-                núm[i,ia] = núm1[(A - 1) - i,(A - 1) - ia];
-            }
+        for(int i = 0; i < núm.Length / 2; i++){
+            B = núm[i];
+            núm[i] = núm[(A - 1) - i];
+            núm[(A - 1) - i] = B;
         }
         Console.Write("\n=========");
-        for(int i = 0; i < A; i++){
-            for(int ia = 0; ia < A; ia++){
-                Console.WriteLine("\n{0}",núm[i,ia]);
-            }
+        foreach(int i in núm){
+            Console.WriteLine("\n{0}",i);
         }
         Console.WriteLine("=========");
     }
