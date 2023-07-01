@@ -17,7 +17,7 @@ class vetor{
             Console.WriteLine();
         }
         Console.WriteLine("=============================");
-        for(int i = 0; i < A / 2; i++){
+        for(int i = 0; i < (int)A >> 1; i++){
             for(int ia = 0; ia < A; ia++){
                 if(núm[i,ia] * 2 > A * A){
                     break;
