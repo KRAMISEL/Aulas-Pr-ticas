@@ -16,14 +16,14 @@ class Números{
         Console.WriteLine("A coleção possui ao todo {0} números.",coleção.Length);
         Console.Write("\n>>");
         Console.ReadLine();
-        Console.WriteLine("\nO primeiro número da coleção é {0}.\nO ultimo número da coleção é {1}.",coleção[0],coleção[0 + coleção.Length - 1]);
+        Console.WriteLine("\nO primeiro número da coleção é {0}.\nO ultimo número da coleção é {1}.",coleção[A],coleção[B + coleção.Length - 1]);
         Console.Write("\n>>");
         Console.ReadLine();
         if(coleção.Length - 2 == 1){
-            Console.Write("\nEntre os números {0} e {1}, existe {2} número, que é:",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
+            Console.Write("\nEntre os números {0} e {1}, existe {2} número, que é:",coleção[A],coleção[B + coleção.Length - 1],coleção.Length - 2);
         }
         else{
-            Console.Write("\nEntre os números {0} e {1}, existem {2} números, que são:",coleção[0],coleção[0 + coleção.Length - 1],coleção.Length - 2);
+            Console.Write("\nEntre os números {0} e {1}, existem {2} números, que são:",coleção[A],coleção[B + coleção.Length - 1],coleção.Length - 2);
         }
         for(int i = 0; i < coleção.Length - 2; i++){
             Console.Write(" {0}",coleção[i + 1]);
@@ -56,7 +56,7 @@ class Números{
         Console.Write("\n>>");
         Console.ReadLine();
         Array.Sort(coleção);
-        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.",coleção[0],coleção[0 + coleção.Length - 1]);
+        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.",coleção[A = 0],coleção[(B = 0) + coleção.Length - 1]);
         Console.Write("\n>>");
         Console.ReadLine();
         Console.Write("\nA coleção ordenada crescentemente:");
