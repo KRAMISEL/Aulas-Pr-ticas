@@ -7,12 +7,17 @@ class vetor{
         for(int i = 0; i < núm.Length; i++){
             núm[i] = int.Parse(Console.ReadLine());
         }
+        Console.Write("\nOrdem inserida.:\n=========");
+        foreach(int i in núm){
+            Console.WriteLine("\n{0}",i);
+        }
+        Console.WriteLine("=========");
         for(int i = 0; i < núm.Length / 2; i++){
             B = núm[i];
             núm[i] = núm[((int)A - 1) - i];
             núm[((int)A - 1) - i] = B;
         }
-        Console.Write("\n=========");
+        Console.Write("\nOrdem invertida.:\n=========");
         foreach(int i in núm){
             Console.WriteLine("\n{0}",i);
         }

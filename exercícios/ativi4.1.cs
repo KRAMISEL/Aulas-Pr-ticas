@@ -8,10 +8,15 @@ class vetor{
             núm[i] = float.Parse(Console.ReadLine());
             núm1[i] = núm[i];
         }
+        Console.Write("\nOrdem inserida.:\n=========");
+        foreach(int i in núm){
+            Console.WriteLine("\n{0}",i);
+        }
+        Console.WriteLine("=========");
         for(int i = 0; i < núm.Length; i++){
             núm[i] = núm1[(A - 1) - i];
         }
-        Console.Write("\n=========");
+        Console.Write("\nordem invertida.:\n=========");
         foreach(int i in núm){
             Console.WriteLine("\n{0}",i);
         }
