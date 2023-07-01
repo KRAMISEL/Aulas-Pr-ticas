@@ -22,11 +22,9 @@ class vetor{
                 if(núm[i,ia] * 2 > A * A){
                     break;
                 }
-                else{
-                    B = núm[i,ia];
-                    núm[i,ia] = núm[((int)A - 1) - i,((int)A - 1) - ia];
-                    núm[((int)A - 1) - i,((int)A - 1) - ia] = B;
-                }
+                B = núm[i,ia];
+                núm[i,ia] = núm[((int)A - 1) - i,((int)A - 1) - ia];
+                núm[((int)A - 1) - i,((int)A - 1) - ia] = B;
             }
         }
         Console.Write("\nOrdem invertida.:\n=============================\n");
