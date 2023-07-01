@@ -7,7 +7,7 @@ class vetor{
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < B; ia++){
                 núm[i,ia] = float.Parse(Console.ReadLine());
-                núm1[i,ia] = núm[i,ia];
+                núm1[(A - 1) - i,(B - 1) - ia] = núm[i,ia];
             }
         }
         Console.Write("\nOrdem inserida.:\n=========\n");
@@ -20,7 +20,7 @@ class vetor{
         Console.WriteLine("=========");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < B; ia++){
-                núm[i,ia] = núm1[(A - 1) - i,(B - 1) - ia];
+                núm[i,ia] = núm1[i,ia];
             }
         }
         Console.Write("\nOrdem invertida.:\n=========\n");

@@ -20,7 +20,7 @@ class vetor{
         Console.WriteLine("=========");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < B; ia++){
-                núm[i,ia] = núm[i + A,ia + B];
+                núm[i,ia] = núm[A + i,B + ia];
             }
         }
         Console.Write("\nOrdem invertida.:\n=========\n");
