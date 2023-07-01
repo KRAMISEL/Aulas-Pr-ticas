@@ -11,8 +11,8 @@ class vetor{
             }
         }
         Console.Write("\nOrdem inserida.:\n=========\n");
-        for(int i = 0; i < A * 2; i++){
-            for(int ia = 0; ia < B * 2; ia++){
+        for(int i = 0; i < A; i++){
+            for(int ia = 0; ia < B; ia++){
                 Console.Write(" {0}",núm[i,ia]);
             }
             Console.WriteLine();
