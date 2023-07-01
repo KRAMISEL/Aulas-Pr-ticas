@@ -6,7 +6,7 @@ class vetor{
         Console.WriteLine("Preencha o vetor com números.");
         for(int i = 0; i < núm.Length; i++){
             núm[i] = float.Parse(Console.ReadLine());
-            núm1[i] = núm[i];
+            núm1[(A - 1) - i] = núm[i];
         }
         Console.Write("\nOrdem inserida.:\n=========");
         foreach(int i in núm){
@@ -14,7 +14,7 @@ class vetor{
         }
         Console.WriteLine("=========");
         for(int i = 0; i < núm.Length; i++){
-            núm[i] = núm1[(A - 1) - i];
+            núm[i] = núm1[i];
         }
         Console.Write("\nordem invertida.:\n=========");
         foreach(int i in núm){
