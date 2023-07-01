@@ -11,27 +11,30 @@ class Programa{
                 números[i,ia] = int.Parse(Console.ReadLine());
             }
         }
-        Console.WriteLine("====================>\n\nNúmeros digitados:");
+        Console.WriteLine("====================>\nNúmeros digitados:");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < A; ia++){
-                Console.WriteLine(" {0} ",números[i,ia]);
+                Console.Write(" {0} ",números[i,ia]);
             }
+            Console.WriteLine();
         }
         Console.WriteLine("====================>\n\nNúmeros pares:");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < A; ia++){
                 if(números[i,ia] % 2 == 0){
-                    Console.WriteLine(" {0} ",números[i,ia]);
+                    Console.Write(" {0} ",números[i,ia]);
                 }
             }
+            Console.WriteLine();
         }
         Console.WriteLine("====================>\n\nNúmeros ímpares:");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < A; ia++){
                 if(números[i,ia] % 2 != 0){
-                    Console.WriteLine(" {0} ",números[i,ia]);
+                    Console.Write(" {0} ",números[i,ia]);
                 }
             }
+            Console.WriteLine();
         }
         Console.Write("====================>\n\nMédia dos números ímpares:");
         for(int i = 0; i < A; i++){
