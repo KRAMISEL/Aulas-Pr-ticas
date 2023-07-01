@@ -2,11 +2,6 @@ using System;
 class vetor{
     static void Main(){
         float A = 3f,B = 2f,C;
-        if(A % 2 != 0 && B % 2 == 0){
-            C = B;
-            B = A;
-            A = C;
-        }
         float[,] núm = new float[(int)A,(int)B];
         Console.WriteLine("Preencha o vetor com números.");
         for(int i = 0; i < A; i++){
@@ -25,6 +20,12 @@ class vetor{
         for(int i = 0; i < A / 2; i++){
             for(int ia = 0; ia < B; ia++){
                 if(núm[i,ia] * 2 > A * B){
+                    break;
+                }
+                else if(núm[i,ia] * 2 == A * B){
+                    C = núm[i,ia];
+                    núm[i,ia] = núm[((int)A - 1) - i,((int)B - 1) - ia];
+                    núm[((int)A - 1) - i,((int)B - 1) - ia] = C;
                     break;
                 }
                 C = núm[i,ia];
