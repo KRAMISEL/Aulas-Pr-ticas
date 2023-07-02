@@ -18,17 +18,20 @@ class Programa{
         }
         Console.WriteLine("====================>");
         for(int i = 0; i < A; i++){
-            Console.WriteLine(números[0,i]);
+            Console.Write(" {0}",números[0,i]);
         }
+        Console.WriteLine();
         for(int i = 0; i < A; i++){
-            Console.WriteLine(números[1,i]);
+            Console.Write(" {0}",números[1,i]);
         }
+        Console.WriteLine();
         for(int i = 0; i < A; i++){
-            Console.WriteLine(números[2,i]);
+            Console.Write(" {0}",números[2,i]);
         }
+        Console.WriteLine();
         for(int i = 0; i < A; i++){
-            Console.WriteLine(números[3,i]);
+            Console.Write(" {0}",números[3,i]);
         }
-        Console.WriteLine("====================>");
+        Console.WriteLine("\n====================>");
     }
 }

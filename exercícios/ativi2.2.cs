@@ -12,8 +12,9 @@ class Programa{
         Console.WriteLine("====================>");
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < A; ia++){
-                Console.WriteLine(números[i,ia]);
+                Console.Write(" {0}",números[i,ia]);
             }
+            Console.WriteLine();
         }
         Console.WriteLine("====================>");
     }
