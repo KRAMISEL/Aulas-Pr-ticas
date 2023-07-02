@@ -18,14 +18,14 @@ class programa{
                 númÌmparContagem++;
             }
         }
-        Console.WriteLine("\n Números Pares:");
+        Console.Write("\n Números Pares:");
         for(int i = 0; i < númParContagem; i++){
-            Console.WriteLine("{0}",númPares[i]);
+            Console.Write(" {0}",númPares[i]);
         }
-        Console.WriteLine("=================\n\n Números Ìmpares:");
+        Console.Write("\n\n Números Ìmpares:");
         for(int i = 0; i < númÌmparContagem; i++){
-            Console.WriteLine("{0}",númÌmpares[i]);
+            Console.Write(" {0}",númÌmpares[i]);
         }
-        Console.WriteLine("=================");
+        Console.WriteLine();
     }
 }

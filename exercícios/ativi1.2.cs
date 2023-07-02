@@ -14,18 +14,18 @@ class programa{
                 númÌmpares[i] = todosOsNúmeros[i];
             }
         }
-        Console.WriteLine("\n Números Pares:");
+        Console.Write("\n Números Pares:");
         foreach(int i in númPares){
             if(i != 0){
-                Console.WriteLine("{0}",i);
+                Console.Write(" {0}",i);
             }
         }
-        Console.WriteLine("=================\n\n Números Ìmpares:");
+        Console.Write("\n\n Números Ìmpares:");
         foreach(int i in númÌmpares){
             if(i != 0){
-                Console.WriteLine("{0}",i);
+                Console.Write(" {0}",i);
             }
         }
-        Console.WriteLine("=================");
+        Console.WriteLine();
     }
 }
