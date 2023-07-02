@@ -4,7 +4,7 @@ class program{
         Console.Write("Qual é o nome do fucionário? ");
         string nome = Console.ReadLine();
         Console.Write("Qual é o seu salário? ");
-        double salário = double.Parse(Console.ReadLine());
-        Console.WriteLine("O fucionário {0} tem um salário de {1:c} em março.",nome,salário);
+        float salário = float.Parse(Console.ReadLine());
+        Console.WriteLine("O fucionário {0} tem um salário de {1:C} em março.",nome,salário);
     }
 }

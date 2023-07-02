@@ -2,7 +2,7 @@ using System;
 class program{
    static void Main(){
       Console.Write("Digite algum número:");
-      int num = int.Parse(Console.ReadLine());
+      float num = float.Parse(Console.ReadLine());
       if(num % 2 == 0){
          Console.WriteLine("Este número é par.");
       }

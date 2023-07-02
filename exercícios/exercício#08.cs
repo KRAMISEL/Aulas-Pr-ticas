@@ -2,7 +2,7 @@ using System;
 class program{
     static void Main(){
         Console.WriteLine("Digite uma medida em metros: ");
-        double Metros = double.Parse(Console.ReadLine());
+        float Metros = float.Parse(Console.ReadLine());
         Console.WriteLine("A distância de {0} corresponde a: ",Metros);
         Console.Write(Metros / 1000 + "Km, ");
         Console.Write(Metros / 100 + "Hm, ");
