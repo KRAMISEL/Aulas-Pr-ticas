@@ -1,5 +1,6 @@
 using System;
 class program{
+    static int N_deCadastro = 0;
     static int[] quantiCadastro = new int[0],idade = new int[0];
     static string[] nome = new string[0];
     static float[] peso = new float[0],altura = new float[0];
@@ -67,18 +68,18 @@ class program{
         Array.Copy(armazenamentoDePesos, peso, peso.Length - quantidadeDeCadastro);
         Array.Copy(armazenamentoDeAlturas, altura, altura.Length - quantidadeDeCadastro);
         Array.Copy(armazenamentoDeSexos, sexo, sexo.Length - quantidadeDeCadastro);
-        for(int i = 0; i < quantidadeDeCadastro; i++){
-            Console.WriteLine("\n Cadastro de número.: <( {0} )>",quantiCadastro[i + quantiCadastro.Length - quantidadeDeCadastro] = (i + 1) * 1);
+        for(int i = N_deCadastro; i < quantiCadastro.Length; i++){
+            Console.WriteLine("\n Cadastro de número.: <( {0} )>",quantiCadastro[i] = N_deCadastro++ + 1);
             Console.Write(" Digite o seu nome: ");
-            nome[i + nome.Length - quantidadeDeCadastro] = Console.ReadLine();
+            nome[i] = Console.ReadLine();
             Console.Write(" Digite a sua idade: ");
-            idade[i + idade.Length - quantidadeDeCadastro] = int.Parse(Console.ReadLine());
+            idade[i] = int.Parse(Console.ReadLine());
             Console.Write(" Digite o seu peso: ");
-            peso[i + peso.Length - quantidadeDeCadastro] = float.Parse(Console.ReadLine());
+            peso[i] = float.Parse(Console.ReadLine());
             Console.Write(" Digite a sua altura: ");
-            altura[i + altura.Length - quantidadeDeCadastro] = float.Parse(Console.ReadLine());
+            altura[i] = float.Parse(Console.ReadLine());
             Console.Write(" Digite o seu sexo: ");
-            sexo[i + sexo.Length - quantidadeDeCadastro] = char.Parse(Console.ReadLine());
+            sexo[i] = char.Parse(Console.ReadLine());
             Console.WriteLine(" ==================================>");
         }
         avançar:
@@ -198,7 +199,6 @@ class program{
             goto avançar3;
         }
         voltar:
-        Console.WriteLine("\n <| Área de Impreção de Cadastro |>");
         if(imprimirCadastro == 1){
             Console.WriteLine("\n Qual cadastro deseja imprimir: ");
         }else{
@@ -266,7 +266,6 @@ class program{
             goto avançar3;
         }
         voltar:
-        Console.WriteLine("\n <| Área para Excluir Cadastro |>");
         if(excluirCadastro == 1){
             Console.WriteLine("\n Qual cadastro deseja excluir:");
         }else{
