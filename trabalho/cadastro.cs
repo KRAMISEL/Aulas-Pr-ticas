@@ -92,8 +92,7 @@ class program{
             Console.WriteLine(" Não existem cadastros a serem alterados.");
             Console.ReadLine();
             goto avançar0;
-        }
-        else if(quantiCadastro.Length == 1){
+        }else if(quantiCadastro.Length == 1){
             Console.Write(" Digite o seu nome: ");
             nome[0] = Console.ReadLine();
             Console.Write(" Digite a sua idade: ");
@@ -116,11 +115,9 @@ class program{
         if(alterarCadastro > quantiCadastro.Length){
             Console.WriteLine("\n A quantidade de cadastros a serem alterados não corresponde a quantidade de cadastros existentes.");
             goto retorno;
-        }
-        else if(alterarCadastro == 0){
+        }else if(alterarCadastro == 0){
             goto avançar2;
-        }
-        else if(alterarCadastro == quantiCadastro.Length){
+        }else if(alterarCadastro == quantiCadastro.Length){
             for(int i = 0; i < alterarCadastro; i++){
                 Console.Write("\n Digite o seu nome: ");
                 nome[i] = Console.ReadLine();
@@ -177,8 +174,7 @@ class program{
         if(quantiCadastro.Length == 0){
             Console.WriteLine(" Não existem cadastros a serem imprimidos.");
             goto avançar0;
-        }
-        else if(quantiCadastro.Length == 1){
+        }else if(quantiCadastro.Length == 1){
             Console.WriteLine(" Cadastro de número <( {0} )>:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>",quantiCadastro[0],nome[0],idade[0],peso[0],altura[0],sexo[0]);
             Console.ReadLine();
             goto avançar1;
@@ -191,11 +187,9 @@ class program{
         if(imprimirCadastro > quantiCadastro.Length){
             Console.WriteLine("\n A quantidade de cadastros a serem imprimidos não corresponde a quantidade de cadastros existentes.");
             goto retorno;
-        }
-        else if(imprimirCadastro == 0){
+        }else if(imprimirCadastro == 0){
             goto avançar2;
-        }
-        else if(imprimirCadastro == quantiCadastro.Length){
+        }else if(imprimirCadastro == quantiCadastro.Length){
             for(int i = 0; i < quantiCadastro.Length; i++){
                 Console.Write("\n Cadastro de número {0}:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>\n",quantiCadastro[i],nome[i],idade[i],peso[i],altura[i],sexo[i]);
                 Console.ReadLine();
@@ -233,8 +227,7 @@ class program{
             Console.WriteLine(" Não existem cadastros a serem excluidos.");
             Console.ReadLine();
             goto avançar0;
-        }
-        else if(quantiCadastro.Length == 1){
+        }else if(quantiCadastro.Length == 1){
             quantiCadastro = new int[quantiCadastro.Length - 1];
             nome = new string[nome.Length - 1];
             idade = new int[idade.Length - 1];
@@ -257,11 +250,9 @@ class program{
         if(excluirCadastro > quantiCadastro.Length){
             Console.WriteLine(" A quantidade de cadastros a serem excluidos não corresponde a quantidade de cadastros existentes.");
             goto retorno;
-        }
-        else if(excluirCadastro == 0){
+        }else if(excluirCadastro == 0){
             goto avançar2;
-        }
-        else if(excluirCadastro == quantiCadastro.Length){
+        }else if(excluirCadastro == quantiCadastro.Length){
             quantiCadastro = new int[quantiCadastro.Length - excluirCadastro];
             nome = new string[nome.Length - excluirCadastro];
             idade = new int[idade.Length - excluirCadastro];
