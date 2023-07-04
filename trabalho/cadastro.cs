@@ -91,7 +91,7 @@ class program{
         if(quantiCadastro.Length == 0){
             Console.WriteLine(" Não existem cadastros a serem alterados.");
             Console.ReadLine();
-            goto avançar;
+            goto avançar0;
         }
         else if(quantiCadastro.Length == 1){
             Console.Write(" Digite o seu nome: ");
@@ -105,6 +105,7 @@ class program{
             Console.Write(" Digite o seu sexo: ");
             sexo[0] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro alterado.\n ====================>");
+            Console.ReadLine();
             goto avançar1;
         }
         retorno:
@@ -133,6 +134,7 @@ class program{
                 sexo[i] = char.Parse(Console.ReadLine());
                 Console.WriteLine(" Cadastro de número {0} alterado.\n ========================================>",quantiCadastro[i]);
             }
+        Console.ReadLine();
         goto avançar3;
         }
         voltar:
@@ -163,21 +165,22 @@ class program{
             sexo[altCadastro[i]] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro de número {0} alterado.\n ========================================>",altCadastro[i] + 1);
         }
+        Console.WriteLine();
+        avançar0:
         avançar1:
         avançar2:
         avançar3:
-        Console.WriteLine();
-        avançar:
         Main();
     }
     static void Impreçãodecadastro(){
         Console.WriteLine("\n<===========================>\n<=| Impreção de cadastros |=>\n<===========================>\n");
         if(quantiCadastro.Length == 0){
             Console.WriteLine(" Não existem cadastros a serem imprimidos.");
-            goto avançar;
+            goto avançar0;
         }
         else if(quantiCadastro.Length == 1){
             Console.WriteLine(" Cadastro de número <( {0} )>:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>",quantiCadastro[0],nome[0],idade[0],peso[0],altura[0],sexo[0]);
+            Console.ReadLine();
             goto avançar1;
         }
         retorno:
@@ -195,6 +198,7 @@ class program{
         else if(imprimirCadastro == quantiCadastro.Length){
             for(int i = 0; i < quantiCadastro.Length; i++){
                 Console.Write("\n Cadastro de número {0}:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>\n",quantiCadastro[i],nome[i],idade[i],peso[i],altura[i],sexo[i]);
+                Console.ReadLine();
             }
             goto avançar3;
         }
@@ -216,11 +220,11 @@ class program{
         for(int i = 0; i < impCadastro.Length; i++){
             Console.Write("\n Cadastro de número {0}:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>\n",impCadastro[i] + 1,nome[impCadastro[i]],idade[impCadastro[i]],peso[impCadastro[i]],altura[impCadastro[i]],sexo[impCadastro[i]]);
         }
-        avançar:
+        Console.ReadLine();
+        avançar0:
         avançar1:
         avançar2:
         avançar3:
-        Console.ReadLine();
         Main();
     }
     static void Excluircadastro(){
@@ -237,7 +241,9 @@ class program{
             peso = new float[peso.Length - 1];
             altura = new float[altura.Length - 1];
             sexo = new char[sexo.Length - 1];
+            N_deCadastro -= 1;
             Console.WriteLine(" Cadastro excluido.");
+            Console.ReadLine();
             goto avançar1;
         }
         retorno:
@@ -262,7 +268,9 @@ class program{
             peso = new float[peso.Length - excluirCadastro];
             altura = new float[altura.Length - excluirCadastro];
             sexo = new char[sexo.Length - excluirCadastro];
+            N_deCadastro -= excluirCadastro;
             Console.Write("\n Todos os cadastros foram excluidos.");
+            Console.ReadLine();
             goto avançar3;
         }
         voltar:
@@ -313,11 +321,12 @@ class program{
         for(int i = 0; i < excCadastro.Length; i++){
             Console.WriteLine("\n Cadastro de número {0} excluido.",excCadastro[i] + 1);
         }
+        N_deCadastro -= excCadastro.Length;
+        Console.ReadLine();
+        avançar0:
         avançar1:
         avançar2:
         avançar3:
-        Console.WriteLine();
-        avançar0:
         Main();
     }
     static void Limparatela(){
