@@ -12,7 +12,10 @@ class vetor{
             Console.WriteLine("\n{0}",i);
         }
         Console.WriteLine("=========");
-        for(int i = 0; i < núm.Length / 2; i++){
+        for(int i = 0; i < núm.Length; i++){
+            if(núm[i] * 2 > A){
+                break;
+            }
             B = núm[i];
             núm[i] = núm[((int)A - 1) - i];
             núm[((int)A - 1) - i] = B;
