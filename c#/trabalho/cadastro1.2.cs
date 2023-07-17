@@ -51,36 +51,27 @@ class program{
         }
         for(int i = N_deCadastro; i < quantidadeDeCadastro1; i++){
             quantiCadastro.Add(N_deCadastro += 1);
-            Console.WriteLine("\n Cadastro de número.: <( {0} )>",i + 1);
-            Console.Write(" Digite o seu nome: ");
+            Console.WriteLine("\n Cadastro de número__.: |{0}|",i + 1);
+            Console.Write(" Digite o seu nome___.: ");
             nome.Add(Console.ReadLine());
-            Console.Write(" Digite a sua idade: ");
+            Console.Write(" Digite a sua idade__.: ");
             idade.Add(int.Parse(Console.ReadLine()));
-            Console.Write(" Digite o seu peso: ");
+            Console.Write(" Digite o seu peso___.: ");
             peso.Add(float.Parse(Console.ReadLine()));
-            Console.Write(" Digite a sua altura: ");
+            Console.Write(" Digite a sua altura_.: ");
             altura.Add(float.Parse(Console.ReadLine()));
-            Console.Write(" Digite o seu sexo: ");
+            Console.Write(" Digite o seu sexo___.: ");
             sexo.Add(char.Parse(Console.ReadLine()));
-            Console.WriteLine(" ==================================>");
+            Console.WriteLine(" :.==================================>");
         }
-        foreach(int i in quantiCadastro){
-            Console.WriteLine("\n Cadastro de número.: <( {0} )>",i);
-        }
-        foreach(string i in nome){
-            Console.WriteLine("\n Nome: {0}",i);
-        }
-        foreach(int i in idade){
-            Console.WriteLine("\n Idade: {0}",i);
-        }
-        foreach(float i in peso){
-            Console.WriteLine("\n Peso: {0}",i);
-        }
-        foreach(float i in altura){
-            Console.WriteLine("\n Altura: {0}",i);
-        }
-        foreach(char i in sexo){
-            Console.WriteLine("\n Sexo: {0}",i);
+        for(int i = 0; i < quantiCadastro.Count; i++){
+            Console.WriteLine("\n Cadastro de número..: |{0}|",quantiCadastro[i]);
+            Console.WriteLine(" Nome...: {0}",nome[i]);
+            Console.WriteLine(" Idade..: {0}",idade[i]);
+            Console.WriteLine(" Peso...: {0}",peso[i]);
+            Console.WriteLine(" Altura.: {0}",altura[i]);
+            Console.WriteLine(" Sexo...: {0}",sexo[i]);
+            Console.WriteLine(" :.==================================>");
         }
         avançar:
         Console.WriteLine();

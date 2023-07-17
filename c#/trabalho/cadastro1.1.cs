@@ -69,18 +69,18 @@ class program{
         Array.Copy(armazenamentoDeAlturas, altura, altura.Length - quantidadeDeCadastro);
         Array.Copy(armazenamentoDeSexos, sexo, sexo.Length - quantidadeDeCadastro);
         for(int i = N_deCadastro; i < quantiCadastro.Length; i++){
-            Console.WriteLine("\n Cadastro de número.: <( {0} )>",quantiCadastro[i] = N_deCadastro++ + 1);
-            Console.Write(" Digite o seu nome: ");
+            Console.WriteLine("\n Cadastro de número__.: |{0}|",quantiCadastro[i] = N_deCadastro++ + 1);
+            Console.Write(" Digite o seu nome___.: ");
             nome[i] = Console.ReadLine();
-            Console.Write(" Digite a sua idade: ");
+            Console.Write(" Digite a sua idade__.: ");
             idade[i] = int.Parse(Console.ReadLine());
-            Console.Write(" Digite o seu peso: ");
+            Console.Write(" Digite o seu peso___.: ");
             peso[i] = float.Parse(Console.ReadLine());
-            Console.Write(" Digite a sua altura: ");
+            Console.Write(" Digite a sua altura_.: ");
             altura[i] = float.Parse(Console.ReadLine());
-            Console.Write(" Digite o seu sexo: ");
+            Console.Write(" Digite o seu sexo___.: ");
             sexo[i] = char.Parse(Console.ReadLine());
-            Console.WriteLine(" ==================================>");
+            Console.WriteLine(" :.==================================>");
         }
         avançar:
         Console.WriteLine();
@@ -93,15 +93,15 @@ class program{
             Console.ReadLine();
             goto avançar0;
         }else if(quantiCadastro.Length == 1){
-            Console.Write(" Digite o seu nome: ");
+            Console.Write(" Digite o seu nome___.: ");
             nome[0] = Console.ReadLine();
-            Console.Write(" Digite a sua idade: ");
+            Console.Write(" Digite a sua idade__: ");
             idade[0] = int.Parse(Console.ReadLine());
-            Console.Write(" Digite o seu peso: ");
+            Console.Write(" Digite o seu peso___.: ");
             peso[0] = float.Parse(Console.ReadLine());
-            Console.Write(" Digite a sua altura: ");
+            Console.Write(" Digite a sua altura_.: ");
             altura[0] = float.Parse(Console.ReadLine());
-            Console.Write(" Digite o seu sexo: ");
+            Console.Write(" Digite o seu sexo___.: ");
             sexo[0] = char.Parse(Console.ReadLine());
             Console.WriteLine(" Cadastro alterado.\n ====================>");
             Console.ReadLine();
@@ -119,17 +119,17 @@ class program{
             goto avançar2;
         }else if(alterarCadastro == quantiCadastro.Length){
             for(int i = 0; i < alterarCadastro; i++){
-                Console.Write("\n Digite o seu nome: ");
+                Console.Write("\n Digite o seu nome___.: ");
                 nome[i] = Console.ReadLine();
-                Console.Write(" Digite a sua idade: ");
+                Console.Write(" Digite a sua idade__.: ");
                 idade[i] = int.Parse(Console.ReadLine());
-                Console.Write(" Digite o seu peso: ");
+                Console.Write(" Digite o seu peso___.: ");
                 peso[i] = float.Parse(Console.ReadLine());
-                Console.Write(" Digite a sua altura: ");
+                Console.Write(" Digite a sua altura_.: ");
                 altura[i] = float.Parse(Console.ReadLine());
-                Console.Write(" Digite o seu sexo: ");
+                Console.Write(" Digite o seu sexo___.: ");
                 sexo[i] = char.Parse(Console.ReadLine());
-                Console.WriteLine(" Cadastro de número {0} alterado.\n ========================================>",quantiCadastro[i]);
+                Console.WriteLine(" Cadastro |{0}| alterado.\n ========================================>",quantiCadastro[i]);
             }
         Console.ReadLine();
         goto avançar3;
@@ -150,17 +150,17 @@ class program{
             }
         }
         for(int i = 0; i < altCadastro.Length; i++){
-            Console.Write("\n Digite o seu nome: ");
+            Console.Write("\n Digite o seu nome___.: ");
             nome[altCadastro[i]] = Console.ReadLine();
-            Console.Write(" Digite a sua idade: ");
+            Console.Write(" Digite a sua idade__.: ");
             idade[altCadastro[i]] = int.Parse(Console.ReadLine());
-            Console.Write(" Digite o seu peso: ");
+            Console.Write(" Digite o seu peso___.: ");
             peso[altCadastro[i]] = float.Parse(Console.ReadLine());
-            Console.Write(" Digite a sua altura: ");
+            Console.Write(" Digite a sua altura_.: ");
             altura[altCadastro[i]] = float.Parse(Console.ReadLine());
-            Console.Write(" Digite o seu sexo: ");
+            Console.Write(" Digite o seu sexo___.: ");
             sexo[altCadastro[i]] = char.Parse(Console.ReadLine());
-            Console.WriteLine(" Cadastro de número {0} alterado.\n ========================================>",altCadastro[i] + 1);
+            Console.WriteLine(" Cadastro |{0}| alterado.\n ========================================>",altCadastro[i] + 1);
         }
         Console.WriteLine();
         avançar0:
@@ -175,7 +175,7 @@ class program{
             Console.WriteLine(" Não existem cadastros a serem imprimidos.");
             goto avançar0;
         }else if(quantiCadastro.Length == 1){
-            Console.WriteLine(" Cadastro de número <( {0} )>:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>",quantiCadastro[0],nome[0],idade[0],peso[0],altura[0],sexo[0]);
+            Console.WriteLine(" Cadastro |{0}|.:==============>\n Nome...: {1}\n Idade..: {2}\n Peso...: {3}\n Altura.: {4}\n Sexo...: {5}\n ===============================>",quantiCadastro[0],nome[0],idade[0],peso[0],altura[0],sexo[0]);
             Console.ReadLine();
             goto avançar1;
         }
@@ -191,9 +191,9 @@ class program{
             goto avançar2;
         }else if(imprimirCadastro == quantiCadastro.Length){
             for(int i = 0; i < quantiCadastro.Length; i++){
-                Console.Write("\n Cadastro de número {0}:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>\n",quantiCadastro[i],nome[i],idade[i],peso[i],altura[i],sexo[i]);
-                Console.ReadLine();
+                Console.Write("\n Cadastro |{0}|.:==============>\n Nome...: {1}\n Idade..: {2}\n Peso...: {3}\n Altura.: {4}\n Sexo...: {5}\n ===============================>\n",quantiCadastro[i],nome[i],idade[i],peso[i],altura[i],sexo[i]);
             }
+            Console.ReadLine();
             goto avançar3;
         }
         voltar:
@@ -212,7 +212,7 @@ class program{
             }
         }
         for(int i = 0; i < impCadastro.Length; i++){
-            Console.Write("\n Cadastro de número {0}:\n Nome: {1}\n Idade: {2}\n Peso: {3}\n Altura: {4}\n Sexo: {5}\n ===============================>\n",impCadastro[i] + 1,nome[impCadastro[i]],idade[impCadastro[i]],peso[impCadastro[i]],altura[impCadastro[i]],sexo[impCadastro[i]]);
+            Console.Write("\n Cadastro |{0}|.:==============>\n Nome...: {1}\n Idade..: {2}\n Peso...: {3}\n Altura.: {4}\n Sexo...: {5}\n ===============================>\n",impCadastro[i] + 1,nome[impCadastro[i]],idade[impCadastro[i]],peso[impCadastro[i]],altura[impCadastro[i]],sexo[impCadastro[i]]);
         }
         Console.ReadLine();
         avançar0:
@@ -310,7 +310,7 @@ class program{
         Array.Copy(armazenamentoDeSexos, sexo, sexo.Length);
         Array.Sort(excCadastro);
         for(int i = 0; i < excCadastro.Length; i++){
-            Console.WriteLine("\n Cadastro de número {0} excluido.",excCadastro[i] + 1);
+            Console.WriteLine("\n Cadastro |{0}| excluido.",excCadastro[i] + 1);
         }
         N_deCadastro -= excCadastro.Length;
         Console.ReadLine();
