@@ -51,7 +51,7 @@ class program{
         }
         for(int i = N_deCadastro; i < quantidadeDeCadastro1; i++){
             quantiCadastro.Add(N_deCadastro += 1);
-            Console.WriteLine("\n Cadastro de número__.: |{0}|",i + 1);
+            Console.WriteLine("\n Cadastro de número__.: |{0}| :.",i + 1);
             Console.Write(" Digite o seu nome___.: ");
             nome.Add(Console.ReadLine());
             Console.Write(" Digite a sua idade__.: ");
@@ -62,16 +62,16 @@ class program{
             altura.Add(float.Parse(Console.ReadLine()));
             Console.Write(" Digite o seu sexo___.: ");
             sexo.Add(char.Parse(Console.ReadLine()));
-            Console.WriteLine(" :.==================================>");
+            Console.WriteLine(" ==================================>");
         }
         for(int i = 0; i < quantiCadastro.Count; i++){
-            Console.WriteLine("\n Cadastro de número..: |{0}|",quantiCadastro[i]);
+            Console.WriteLine("\n Cadastro de número..: |{0}| :.",quantiCadastro[i]);
             Console.WriteLine(" Nome...: {0}",nome[i]);
             Console.WriteLine(" Idade..: {0}",idade[i]);
             Console.WriteLine(" Peso...: {0}",peso[i]);
             Console.WriteLine(" Altura.: {0}",altura[i]);
             Console.WriteLine(" Sexo...: {0}",sexo[i]);
-            Console.WriteLine(" :.==================================>");
+            Console.WriteLine(" ==================================>");
         }
         avançar:
         Console.WriteLine();
