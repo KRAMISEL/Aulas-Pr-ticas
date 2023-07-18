@@ -261,19 +261,12 @@ class program{
             }
         }
         for(int i = 0; i < excCadastro.Count; i++){
-            for(int ia = excCadastro[i]; ia < quantiCadastro.Count - 1; ia++){
-                nome[ia] = nome[ia + 1];
-                idade[ia] = idade[ia + 1];
-                peso[ia] = peso[ia + 1];
-                altura[ia] = altura[ia + 1];
-                sexo[ia] = sexo[ia + 1];
-            }
            quantiCadastro.Remove(quantiCadastro[quantiCadastro.Count - 1]);
-           nome.Remove(nome[nome.Count - 1]);
-           idade.Remove(idade[idade.Count - 1]);
-           peso.Remove(peso[peso.Count - 1]);
-           altura.Remove(altura[altura.Count - 1]);
-           sexo.Remove(sexo[sexo.Count - 1]);
+           nome.Remove(nome[excCadastro[i]]);
+           idade.Remove(idade[excCadastro[i]]);
+           peso.Remove(peso[excCadastro[i]]);
+           altura.Remove(altura[excCadastro[i]]);
+           sexo.Remove(sexo[excCadastro[i]]);
         }
         for(int i = 0; i < excCadastro.Count; i++){
             Console.WriteLine("\n Cadastro de número |{0}| excluido.",excCadastro[i] + 1);
