@@ -8,10 +8,6 @@ class Matriz{
         for(int i = 0; i < A; i++){
             for(int ia = 0; ia < B; ia++){
                 matriz[i, ia] = float.Parse(Console.ReadLine());
-            }
-        }
-        for(int i = 0; i < A; i++){
-            for(int ia = 0; ia < B; ia++){
                 if(matriz[i, ia] > númMai && matriz[i, ia] > mai){
                     mai = matriz[i, ia];
                 }
