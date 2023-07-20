@@ -3,6 +3,7 @@ class Números{
     static void Main(){
         Random random = new Random();
         int númbase = random.Next(12),A = 0,B = 0;
+        float númMai = -1000000, númMen = 1000000, mai = -1000000, men = 1000000;
         float[] coleção;
         if(númbase < 3){
             númbase = 3;
@@ -11,6 +12,14 @@ class Números{
         Console.WriteLine("Digite números aleatórios para completar a coleção:");
         for(int i = 0; i < coleção.Length; i++){
             coleção[i] = float.Parse(Console.ReadLine());
+            if(coleção[i] > númMai && coleção[i] > mai){
+                mai = coleção[i];
+            }
+            númMai = coleção[i];
+            if(coleção[i] < númMen && coleção[i] < men){
+                men = coleção[i];
+            }
+            númMen = coleção[i];
         }
         Console.Clear();
         Console.WriteLine("A coleção possui ao todo {0} números.",coleção.Length);
@@ -55,10 +64,10 @@ class Números{
         }
         Console.Write("\n>>");
         Console.ReadLine();
-        Array.Sort(coleção);
-        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.",coleção[A = 0],coleção[(B = 0) + coleção.Length - 1]);
+        Console.WriteLine("\nO menor número da coleção é {0}.\nO maior número da coleção é {1}.",men,mai);
         Console.Write("\n>>");
         Console.ReadLine();
+        Array.Sort(coleção);
         Console.Write("\nA coleção ordenada crescentemente:");
         foreach(int i in coleção){
             Console.Write(" {0}",i);
