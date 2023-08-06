@@ -1,3 +1,3 @@
 "use Strict"
 let variável = "Olá Mundo"
-console.log(variável)
+console.log("\n",variável)
