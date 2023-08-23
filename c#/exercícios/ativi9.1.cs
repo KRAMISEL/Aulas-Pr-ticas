@@ -1,6 +1,7 @@
 using System;
 class JogoVelha{
     static void Main(){
+        reniciar:
         string[] jogoVelha = new string[9];
         string escolha;
         bool jogador = true;
@@ -286,6 +287,12 @@ class JogoVelha{
         }
         if(vitória == false){
             Console.WriteLine("O jogo terminou em velha.");
+        }
+        Console.WriteLine("Deseja reniciar a partida?\n[sim/não]");
+        escolha = Console.ReadLine();
+        if(escolha == "sim"){
+            Console.Clear();
+            goto reniciar;
         }
     }
 }
