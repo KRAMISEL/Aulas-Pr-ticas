@@ -27,15 +27,15 @@ class Notas{
             Console.Write("\n" + notas[(ia - 1) - i]);
         }
         Console.WriteLine("\nTodos as notas acima da média:");
-        for(int i = 0; i < notas.Count; i++){
-            if(notas[i] > notasBanco / notas.Count){
-                Console.WriteLine(notas[i]);
+        foreach(float i in notas){
+            if(i > notasBanco / notas.Count){
+                Console.WriteLine(i);
             }
         }
         Console.WriteLine("Todos as notas acima de 7:");
-        for(int i = 0; i < notas.Count; i++){
-            if(notas[i] > 7){
-                Console.WriteLine(notas[i]);
+        foreach(float i in notas){
+            if(i > 7){
+                Console.WriteLine(i);
             }
         }
         Console.WriteLine("Todas as tarefas foram realizadas.");
