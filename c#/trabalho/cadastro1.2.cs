@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-class program{
+class cadastro2{
     static int N_deCadastro = 0;
     static List<int> quantiCadastro = new List<int>(), idade = new List<int>();
     static List<string> nome = new List<string>();

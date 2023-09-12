@@ -1,5 +1,5 @@
 using System;
-class program{
+class cadastro1{
     static int N_deCadastro = 0;
     static int[] quantiCadastro = new int[0],idade = new int[0];
     static string[] nome = new string[0];
