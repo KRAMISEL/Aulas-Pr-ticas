@@ -1,8 +1,9 @@
 using System;
 class JogoVelha{
+    static string[] jogoVelha;
     static void Main(){
         reniciar:
-        string[] jogoVelha = new string[9];
+        jogoVelha = new string[9];
         string escolha;
         bool jogador = true;
         bool vitória = false;
@@ -34,12 +35,7 @@ class JogoVelha{
             else{
                 jogoVelha[0] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "A2":
@@ -53,12 +49,7 @@ class JogoVelha{
             else{
                 jogoVelha[1] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "A3":
@@ -72,12 +63,7 @@ class JogoVelha{
             else{
                 jogoVelha[2] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "B1":
@@ -91,12 +77,7 @@ class JogoVelha{
             else{
                 jogoVelha[3] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "B2":
@@ -106,12 +87,7 @@ class JogoVelha{
             else{
                 jogoVelha[4] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "B3":
@@ -125,12 +101,7 @@ class JogoVelha{
             else{
                 jogoVelha[5] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "C1":
@@ -144,12 +115,7 @@ class JogoVelha{
             else{
                 jogoVelha[6] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "C2":
@@ -163,12 +129,7 @@ class JogoVelha{
             else{
                 jogoVelha[7] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             case "C3":
@@ -182,22 +143,11 @@ class JogoVelha{
             else{
                 jogoVelha[8] = "O";
             }
-            Console.Clear();
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             jogador = jogador? false : true;
             break;
             default:
-            Console.Clear();
-            Console.WriteLine("Escolha um dos quadrados para preencher.");
-            Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
-            Console.WriteLine("-----------");
-            Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
+            Interface();
             goto voltar;
         }
         for(int i = 0; i < jogoVelha.Length; i++){
@@ -288,11 +238,20 @@ class JogoVelha{
         if(vitória == false){
             Console.WriteLine("O jogo terminou em velha.");
         }
-        Console.WriteLine("Deseja reniciar a partida?\n[sim/não]");
+        Console.WriteLine("Deseja reniciar a partida?\n[s/n]");
         escolha = Console.ReadLine();
-        if(escolha == "sim"){
+        if(escolha == "s"){
             Console.Clear();
             goto reniciar;
         }
+    }
+    static void Interface(){
+        Console.Clear();
+        Console.WriteLine("Escolha um dos quadrados para preencher.");
+        Console.WriteLine(" " + jogoVelha[0] + " | " + jogoVelha[1] + " | " + jogoVelha[2]);
+        Console.WriteLine("-----------");
+        Console.WriteLine(" " + jogoVelha[3] + " | " + jogoVelha[4] + " | " + jogoVelha[5]);
+        Console.WriteLine("-----------");
+        Console.WriteLine(" " + jogoVelha[6] + " | " + jogoVelha[7] + " | " + jogoVelha[8]);
     }
 }
