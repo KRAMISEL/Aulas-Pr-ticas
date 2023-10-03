@@ -10,7 +10,7 @@ class cadastro1{
         Menu();
     }
     static void Menu(){
-        Console.WriteLine("\n Cadastrar________________________:(1)\n Alteração de cadastro____________:(2)\n Impreção de cadastros____________:(3)\n Excluir cadastro_________________:(4)\n Limpar a tela____________________:(5)\n Sair_____________________________:(6)");
+        Console.WriteLine("\n Cadastrar________________________:(1)\n Alteração de cadastro____________:(2)\n Impressão de cadastros____________:(3)\n Excluir cadastro_________________:(4)\n Limpar a tela____________________:(5)\n Sair_____________________________:(6)");
         string execução = Console.ReadLine();
         switch(execução){
             case"1":
@@ -20,7 +20,7 @@ class cadastro1{
             Alteraçãodecadastro();
             break;
             case"3":
-            Impreçãodecadastro();
+            Impressãodecadastro();
             break;
             case"4":
             Excluircadastro();
@@ -169,8 +169,8 @@ class cadastro1{
         avançar3:
         Main();
     }
-    static void Impreçãodecadastro(){
-        Console.WriteLine("\n<===========================>\n<=| Impreção de cadastros |=>\n<===========================>\n");
+    static void Impressãodecadastro(){
+        Console.WriteLine("\n<===========================>\n<=| Impressão de cadastros |=>\n<===========================>\n");
         if(quantiCadastro.Length == 0){
             Console.WriteLine(" Não existem cadastros a serem imprimidos.");
             goto avançar0;
@@ -243,9 +243,9 @@ class cadastro1{
         Console.WriteLine(" Quantidade de cadastros.: <( {0} )>\n",quantiCadastro.Length);
         Console.Write(" Quantos cadastros deseja excluir: ");
         int excluirCadastro = int.Parse(Console.ReadLine());
-        int [] excCadastro = new int[excluirCadastro],armazenamentoDeCadastros = new int[quantiCadastro.Length - excluirCadastro],armazenamentoDeIdades = new int[idade.Length - excluirCadastro];
+        int[] excCadastro = new int[excluirCadastro], armazenamentoDeCadastros = new int[quantiCadastro.Length - excluirCadastro], armazenamentoDeIdades = new int[idade.Length - excluirCadastro];
         string[] armazenamentoDeNomes = new string[nome.Length - excluirCadastro];
-        float[] armazenamentoDePesos = new float[peso.Length - excluirCadastro],armazenamentoDeAlturas = new float[altura.Length - excluirCadastro];
+        float[] armazenamentoDePesos = new float[peso.Length - excluirCadastro], armazenamentoDeAlturas = new float[altura.Length - excluirCadastro];
         char[] armazenamentoDeSexos = new char[sexo.Length - excluirCadastro];
         if(excluirCadastro > quantiCadastro.Length){
             Console.WriteLine(" A quantidade de cadastros a serem excluidos não corresponde a quantidade de cadastros existentes.");

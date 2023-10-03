@@ -1,3 +1,7 @@
 "use Strict"
-let variável = "Olá Mundo"
-console.log("\n",variável)
+let f = "";
+let Função = F => {
+    variável = "Olá Mundo"
+    return variável;
+}
+console.log(f = Função());
