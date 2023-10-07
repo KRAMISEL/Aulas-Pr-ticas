@@ -1,233 +1,112 @@
 using System;
 class JogoVelha{
     static string[] jogoVelha;
+    static bool jogador = true;
     static void Main(){
         reniciar:
         jogoVelha = new string[9];
-        string escolha;
-        bool jogador = true;
+        string escolha = "", decisão = "";
         bool vitória = false;
         Console.WriteLine("   |   |   ");
         Console.WriteLine("-----------");
         Console.WriteLine("   |   |   ");
         Console.WriteLine("-----------");
         Console.WriteLine("   |   |   ");
-        voltar:
         decidido:
         if(jogador == true){
-            Console.WriteLine("Vez do Jogador 1");
+            Console.WriteLine("Vez do Jogador X");
             Console.WriteLine("Onde deseja colocar o X :");
         }
         else{
-            Console.WriteLine("Vez do jogador 2");
+            Console.WriteLine("Vez do jogador O");
             Console.WriteLine("Onde deseja colocar o O :");
         }
         escolha = Console.ReadLine();
         switch(escolha){
             case "A1":
-            if(jogoVelha[0] == "X" || jogoVelha[0] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[0] = "X";
-            }
-            else{
-                jogoVelha[0] = "O";
-            }
+            jogoVelha[0] = implementação(jogoVelha[0]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "A2":
-            if(jogoVelha[1] == "X" || jogoVelha[1] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[1] = "X";
-            }
-            else{
-                jogoVelha[1] = "O";
-            }
+            jogoVelha[1] = implementação(jogoVelha[1]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "A3":
-            if(jogoVelha[2] == "X" || jogoVelha[2] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[2] = "X";
-            }
-            else{
-                jogoVelha[2] = "O";
-            }
+            jogoVelha[2] = implementação(jogoVelha[2]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "B1":
-            if(jogoVelha[3] == "X" || jogoVelha[3] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[3] = "X";
-            }
-            else{
-                jogoVelha[3] = "O";
-            }
+            jogoVelha[3] = implementação(jogoVelha[3]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "B2":
-            if(jogador == true){
-                jogoVelha[4] = "X";
-            }
-            else{
-                jogoVelha[4] = "O";
-            }
+            jogoVelha[4] = implementação(jogoVelha[4]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "B3":
-            if(jogoVelha[5] == "X" || jogoVelha[5] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[5] = "X";
-            }
-            else{
-                jogoVelha[5] = "O";
-            }
+            jogoVelha[5] = implementação(jogoVelha[5]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "C1":
-            if(jogoVelha[6] == "X" || jogoVelha[6] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[6] = "X";
-            }
-            else{
-                jogoVelha[6] = "O";
-            }
+            jogoVelha[6] = implementação(jogoVelha[6]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "C2":
-            if(jogoVelha[7] == "X" || jogoVelha[7] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[7] = "X";
-            }
-            else{
-                jogoVelha[7] = "O";
-            }
+            jogoVelha[7] = implementação(jogoVelha[7]);
             Interface();
-            jogador = jogador? false : true;
             break;
             case "C3":
-            if(jogoVelha[8] == "X" || jogoVelha[8] == "O"){
-                Console.WriteLine("Esse espaço está preenchido.");
-                break;
-            }
-            else if(jogador == true){
-                jogoVelha[8] = "X";
-            }
-            else{
-                jogoVelha[8] = "O";
-            }
+            jogoVelha[8] = implementação(jogoVelha[8]);
             Interface();
-            jogador = jogador? false : true;
             break;
             default:
             Interface();
-            goto voltar;
+            break;
         }
         for(int i = 0; i < jogoVelha.Length; i++){
-            if(jogoVelha[0] == "X" && jogoVelha[1] == "X" && jogoVelha[2] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            if(i == 0 || i % 2 == 0){
+                decisão = "X";
+            }
+            else{
+                decisão = "O";
+            }
+            if(jogoVelha[0] == decisão && jogoVelha[1] == decisão && jogoVelha[2] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[3] == "X" && jogoVelha[4] == "X" && jogoVelha[5] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            else if(jogoVelha[3] == decisão && jogoVelha[4] == decisão && jogoVelha[5] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[6] == "X" && jogoVelha[7] == "X" && jogoVelha[8] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            else if(jogoVelha[6] == decisão && jogoVelha[7] == decisão && jogoVelha[8] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[0] == "X" && jogoVelha[4] == "X" && jogoVelha[8] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            else if(jogoVelha[0] == decisão && jogoVelha[4] == decisão && jogoVelha[8] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[2] == "X" && jogoVelha[4] == "X" && jogoVelha[6] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            else if(jogoVelha[2] == decisão && jogoVelha[4] == decisão && jogoVelha[6] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[0] == "X" && jogoVelha[3] == "X" && jogoVelha[6] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            else if(jogoVelha[0] == decisão && jogoVelha[3] == decisão && jogoVelha[6] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[1] == "X" && jogoVelha[4] == "X" && jogoVelha[7] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
+            else if(jogoVelha[1] == decisão && jogoVelha[4] == decisão && jogoVelha[7] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
-            else if(jogoVelha[2] == "X" && jogoVelha[5] == "X" && jogoVelha[8] == "X"){
-                Console.WriteLine("Jogador 1 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[0] == "O" && jogoVelha[1] == "O" && jogoVelha[2] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[3] == "O" && jogoVelha[4] == "O" && jogoVelha[5] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[6] == "O" && jogoVelha[7] == "O" && jogoVelha[8] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[0] == "O" && jogoVelha[4] == "O" && jogoVelha[8] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[2] == "O" && jogoVelha[4] == "O" && jogoVelha[6] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[0] == "O" && jogoVelha[3] == "O" && jogoVelha[6] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[1] == "O" && jogoVelha[4] == "O" && jogoVelha[7] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
-                vitória = true;
-                break;
-            }
-            else if(jogoVelha[2] == "O" && jogoVelha[5] == "O" && jogoVelha[8] == "O"){
-                Console.WriteLine("Jogador 2 venceu.");
+            else if(jogoVelha[2] == decisão && jogoVelha[5] == decisão && jogoVelha[8] == decisão){
+                Console.WriteLine("Jogador " + decisão + " venceu.");
                 vitória = true;
                 break;
             }
@@ -235,15 +114,29 @@ class JogoVelha{
                 goto decidido;
             }
         }
-        if(vitória == false){
+        if(!vitória){
             Console.WriteLine("O jogo terminou em velha.");
         }
         Console.WriteLine("Deseja reniciar a partida?\n[s/n]");
         escolha = Console.ReadLine();
-        if(escolha == "s"){
+        if(escolha == "s" || escolha == "S"){
             Console.Clear();
             goto reniciar;
         }
+    }
+    static string implementação(string valor){
+        if(valor == "X" || valor == "O"){
+            Console.WriteLine("Esse espaço está preenchido.");
+            return null;
+        }
+        else if(jogador == true){
+            valor = "X";
+        }
+        else{
+            valor = "O";
+        }
+        jogador = jogador? false : true;
+        return valor;
     }
     static void Interface(){
         Console.Clear();
