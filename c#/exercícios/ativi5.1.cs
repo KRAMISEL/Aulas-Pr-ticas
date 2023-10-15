@@ -18,6 +18,6 @@ class Matriz{
                 númMen = matriz[i, ia];
             }
         }
-        Console.WriteLine("O Maior número da matriz é {0}.\nO menor número da matriz é {1}.",mai,men);
+        Console.WriteLine("O Maior número da matriz é {0}.\nO menor número da matriz é {1}.", mai, men);
     }
 }
